@@ -1,0 +1,1 @@
+import{u as r}from"./useMediaQuery-CDF-4tKz.js";const i=800,e=()=>r(`(max-width: ${i}px)`);try{e.displayName="useMobileMediaQuery",e.__docgenInfo={description:"The purpose of this hook is create a single source of truth for the mobile media query",displayName:"useMobileMediaQuery",props:{}}}catch{}export{i as M,e as u};

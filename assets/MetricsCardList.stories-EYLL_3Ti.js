@@ -1,0 +1,25 @@
+import{j as r}from"./jsx-runtime-4WDyTGeM.js";import{T as m}from"./ThemeProviderWrapper-uQhE3vfQ.js";import{a as s,M as a}from"./MetricsCard-CCXpv0Iu.js";import"./index-Dl6G-zuu.js";import"./index-eOQoo3sK.js";import"./CardList-CPK--B32.js";import"./Card-BqSBDNBC.js";import"./styled-DaAyEikA.js";import"./Paper-B6pP1Hjl.js";import"./index-Bu4DXql-.js";import"./Dot-B-sjopOf.js";import"./ListItem-CazW7o9q.js";import"./List-B5csL-18.js";import"./ListContext-BMbj8Y86.js";import"./ListItem-CgztQErV.js";import"./useTimeout-B4b6mSVs.js";import"./isMuiElement-DAcuSkv2.js";import"./useForkRef-BDoLG09A.js";import"./isHostComponent-DVu5iVWx.js";import"./ListItemSecondaryAction-jR0jlMNJ.js";import"./ButtonBase-gXIT4mbS.js";import"./TransitionGroupContext-xAci1nHd.js";import"./useIsFocusVisible-NzCoqL_q.js";import"./RichTooltip-CT5n6NUI.js";import"./Tooltip-DS9FjgPS.js";import"./Tooltip-CSQNJ7MT.js";import"./useTheme-CYpYpbD_.js";import"./ownerDocument-DW-IO8s5.js";import"./Portal-3LY7w8wx.js";import"./index-CmOK7BR8.js";import"./useSlotProps-DeMrnH46.js";import"./mergeSlotProps-Dc5z_XIy.js";import"./useControlled-1Y2rT-1r.js";import"./useId-BkqTTtmk.js";import"./Grow-CF8DuDB2.js";import"./utils-Dh94M0rq.js";import"./useToggle-B4o7u8Ia.js";const er={title:"Design System/Composite Components/MetricsCardList",tags:["autodocs"],component:s},t={render:()=>r.jsx(m,{children:r.jsx(s,{children:Array.from({length:3},(p,e)=>r.jsx(a,{title:"Lorem ipsem",subtitle:"dolor sit amet",value:e.toString()},e))})})},o={render:()=>r.jsx(m,{children:r.jsx(s,{children:Array.from({length:2},(p,e)=>r.jsx(a,{title:"Lorem ipsem",subtitle:"dolor sit amet",value:e.toString()},e))})})},i={render:()=>r.jsx(m,{children:r.jsx(s,{children:Array.from({length:5},(p,e)=>r.jsx(a,{title:"Lorem ipsem",subtitle:"dolor sit amet",value:e.toString()},e))})})};var n,d,c;t.parameters={...t.parameters,docs:{...(n=t.parameters)==null?void 0:n.docs,source:{originalSource:`{
+  render: () => <ThemeProviderWrapper>
+      <MetricsCardList>
+        {Array.from({
+        length: 3
+      }, (_, i) => <MetricsCard key={i} title='Lorem ipsem' subtitle='dolor sit amet' value={i.toString()} />)}
+      </MetricsCardList>
+    </ThemeProviderWrapper>
+}`,...(c=(d=t.parameters)==null?void 0:d.docs)==null?void 0:c.source}}};var l,u,C;o.parameters={...o.parameters,docs:{...(l=o.parameters)==null?void 0:l.docs,source:{originalSource:`{
+  render: () => <ThemeProviderWrapper>
+      <MetricsCardList>
+        {Array.from({
+        length: 2
+      }, (_, i) => <MetricsCard key={i} title='Lorem ipsem' subtitle='dolor sit amet' value={i.toString()} />)}
+      </MetricsCardList>
+    </ThemeProviderWrapper>
+}`,...(C=(u=o.parameters)==null?void 0:u.docs)==null?void 0:C.source}}};var h,g,L;i.parameters={...i.parameters,docs:{...(h=i.parameters)==null?void 0:h.docs,source:{originalSource:`{
+  render: () => <ThemeProviderWrapper>
+      <MetricsCardList>
+        {Array.from({
+        length: 5
+      }, (_, i) => <MetricsCard key={i} title='Lorem ipsem' subtitle='dolor sit amet' value={i.toString()} />)}
+      </MetricsCardList>
+    </ThemeProviderWrapper>
+}`,...(L=(g=i.parameters)==null?void 0:g.docs)==null?void 0:L.source}}};const tr=["Default","LowCardCount","HighCardCount"];export{t as Default,i as HighCardCount,o as LowCardCount,tr as __namedExportsOrder,er as default};
