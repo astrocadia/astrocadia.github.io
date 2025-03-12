@@ -1,0 +1,6 @@
+.RadioButtonGroup {
+  border: var(--standard-border);
+  border-radius: var(--border-radius-s);
+  background-color: var(--background-workspace-color);
+  padding: var(--standard-padding-s);
+}

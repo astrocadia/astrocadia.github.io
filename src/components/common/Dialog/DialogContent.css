@@ -1,0 +1,10 @@
+@import '../../../styles/typography.css';
+
+.DialogContent {
+  @extend .body-1;
+  
+  &.MuiDialogContent-root {
+    padding: 0;
+    color: var(--typography-secondary-color);
+  }
+}

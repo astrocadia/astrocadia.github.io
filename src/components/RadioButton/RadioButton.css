@@ -1,0 +1,53 @@
+@import '../../styles/typography.css';
+
+.RadioButton {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--standard-padding-xs);
+  padding: var(--standard-padding-s) var(--standard-padding-s) var(--standard-padding-m) 0;
+  border-radius: var(--border-radius-s);
+  cursor: pointer;
+  
+  &:focus-visible {
+    outline: var(--button-focus-visible-outline);
+    outline-offset: var(--button-focus-visible-outline-offset);
+  }
+
+  .RadioButton__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--standard-padding-xs);
+    padding-top: 0.25rem;
+
+    .RadioButton__title {
+      color: var(--base-color-neutral-900);
+    }
+
+    .RadioButton__description {
+      color: var(--typography-secondary-color);
+    }
+  }
+  
+  &.RadioButton__checked {
+    background-color: var(--base-color-neutral-200);
+
+    .RadioButton__content {
+      .RadioButton__title {
+        color: var(--typography-primary-color);
+      }
+
+      .RadioButton__description {
+        color: var(--base-color-neutral-900);
+      }
+    }
+  }
+}
+
+.RadioButton__title {
+  @extend .body-1;
+}
+
+.RadioButton__description {
+  @extend .caption;
+}

@@ -1,0 +1,27 @@
+.StrapiContentExhibitSetting {
+  display: flex;
+  flex-direction: row;
+  column-gap: var(--standard-padding-s);
+
+  .StrapiContentExhibitSetting__error {
+    display: flex;
+    color: var(--error-color);
+    margin-left: auto;
+    align-items: center;
+    gap: var(--standard-padding-s);
+    min-height: 2.375rem;
+  }
+
+  .StrapiContentExhibitSetting__errorDisplayName {
+    text-wrap: nowrap;
+  }
+
+  .StrapiContentExhibitSetting__menuItem {
+    min-height: 2.375rem;
+  }
+
+  .StrapiContentExhibitSetting__contentLinkWrapper {
+    margin-left: auto;
+    margin-top: auto;
+  }
+}

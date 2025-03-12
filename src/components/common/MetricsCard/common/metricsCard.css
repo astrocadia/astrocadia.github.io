@@ -1,0 +1,46 @@
+@import '../../../../styles/typography.css';
+
+:root {
+  --MetricCard-height: 7.5rem;
+}
+
+%metricsCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+%metricsCardRoot {
+  width: 13.75rem;
+  min-width: 13.75rem;
+  height: var(--MetricCard-height);
+  min-height: var(--MetricCard-height);
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--background-workspace-color);
+  border: 0.0625rem solid var(--line-color);
+}
+
+%metricsCardHeadingWrapper {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+}
+
+%metricsCardTitle {
+  @extend .body-1;
+}
+
+%metricsCardSubtitle {
+  @extend .caption;
+}
+
+%metricsCardNumericalValue {
+  @extend .heading-2;
+}
+
+%metricsCardTextualValue {
+  font-size: 1rem;
+  line-height: 1.3rem;
+}

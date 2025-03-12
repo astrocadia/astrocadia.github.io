@@ -1,0 +1,32 @@
+@import '../../../../styles/typography.css';
+
+.FeedbackMessagePanel {
+  display: grid;
+  height: 100%;
+
+  .FeedbackMessagePanel__wrapper {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: var(--standard-padding-s);
+    max-width: 22.5rem;
+
+    .FeedbackMessagePanel__imageWrapper {
+      display: grid;
+      padding-bottom: var(--standard-padding-l);
+      & img {
+        margin: auto;
+      }
+    }
+
+    .FeedbackMessagePanel__title {
+      @extend .body-1;
+      text-align: center;
+    }
+    
+    .FeedbackMessagePanel__message {
+      @extend .caption;
+    }
+  }
+}

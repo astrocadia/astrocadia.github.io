@@ -1,0 +1,27 @@
+@import '../../../styles/typography.css';
+
+.InputRequirement {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding-left: 0.625rem;
+  align-items: center;
+  min-height: 1.25rem;
+
+  .InputRequirement__requirementText {
+    @extend .body-1;
+    text-align: left;
+    margin: 0;
+    color: var(--typography-primary-color);
+    font-size: var(--typescale-size-default-s);
+  }
+
+  .InputRequirement__requirementText_requirementMet {
+    color: var(--typography-disabled-color);
+  }
+
+  .InputRequirement__CheckIcon {
+    font-size: 1.25rem;
+    color: var(--base-color-green-600);
+  }
+}

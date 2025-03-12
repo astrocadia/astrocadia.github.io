@@ -1,0 +1,16 @@
+@import '../common/table.css';
+
+.TableCell {
+  &.TableCell__head {
+    background-color: var(--background-workspace-color);
+    border-bottom: var(--table--border);
+    color: var(--typography-secondary-color);
+    padding: 0 var(--standard-padding-m);
+    height: 2.25rem;
+  }
+
+  &.TableCell__body {
+    padding: var(--standard-padding-xs) 0;
+    border-bottom: var(--table--border);
+  }
+}

@@ -1,0 +1,62 @@
+@import '../../styles/typography.css';
+
+.EventScheduleInput {
+  border: var(--standard-border);
+  border-radius: var(--border-radius-s);
+  background-color: var(--background-workspace-color);
+
+  & > div {
+    padding: var(--standard-padding-m);
+
+    &:not(:last-child) {
+      border-bottom: var(--standard-border);
+    }
+  }
+
+  .EventScheduleInput__repeatSection {
+    display: flex;
+    flex-direction: column;
+    gap: var(--standard-padding-m);
+  }
+
+  .EventScheduleInput__splitRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: var(--standard-padding-m);
+
+    .FormControl {
+      &.DatePicker,
+      &.TimePicker {
+        > div {
+          width: 100%;
+
+          .MuiInputBase-root {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .EventScheduleInput__splitRowLabel {
+    @extend .body-1;
+  }
+
+  .EventScheduleInput__chipContainer {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--standard-padding-s);
+
+    .EventScheduleInput__weekdayChip {
+      display: flex;
+      width: 2.5rem;
+      height: 2.5rem;
+      padding: 0;
+    }
+  }
+
+  .SelectWithRemove__select {
+    width: 100%;
+  }
+}

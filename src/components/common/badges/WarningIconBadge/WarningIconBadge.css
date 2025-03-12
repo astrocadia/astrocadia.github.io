@@ -1,0 +1,4 @@
+.WarningIconBadge {
+  background: var(--base-color-orange-100);
+  color: var(--base-color-orange-600);
+}

@@ -1,0 +1,13 @@
+.MenuButton {
+  
+  &.MuiButton-root {
+    padding: 0.44rem 0.75rem;
+    min-width: 0;
+  }
+  
+  &.MuiButton-sizeSmall {
+    font-size: var(--typescale-size-default-s);
+    height: 1.75rem;
+    padding: 0 var(--standard-padding-s);
+  }
+}

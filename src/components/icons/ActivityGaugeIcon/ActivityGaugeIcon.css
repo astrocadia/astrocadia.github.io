@@ -1,0 +1,27 @@
+.ActivityGaugeIcon {
+  display: flex;
+  align-items: center;
+
+  &.ActivityGaugeIcon__low {
+    background-color: var(--base-color-orange-100);
+    color: var(--base-color-orange-600);
+  }
+  .MuiSvgIcon-root {
+    height: 20px;
+    width: 20px;
+    min-width: 20px;
+  }
+  &.ActivityGaugeIcon__med {
+    background-color: var(--base-color-yellow-100);
+    color: var(--base-color-yellow-600);
+  }
+
+  &.ActivityGaugeIcon__high {
+    background-color: var(--base-color-green-100);
+    color: var(--base-color-green-600);
+  }
+  .MuiSvgIcon-root {
+    position: relative;
+    left: 0.063rem;
+  }
+}

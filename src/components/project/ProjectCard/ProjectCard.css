@@ -1,0 +1,16 @@
+.ProjectCard {
+  .EntityCardBanner {
+    border-radius: var(--border-radius-s);
+    
+    /* This is a bit of a css trick in order to apply the opacity to the background image without effecting the image itself */
+    &:before {
+      background-size: .875rem .9rem;
+      opacity: 0.7;
+      background-image: url('../assets/ProjectBackground.svg');
+    }
+
+    & img {
+      height: 7.5rem;
+    }
+  }
+}

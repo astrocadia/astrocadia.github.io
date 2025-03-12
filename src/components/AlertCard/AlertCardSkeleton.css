@@ -1,0 +1,29 @@
+@import './AlertCard.css';
+@import '../CardButton/CardButton.css';
+
+.AlertCardSkeleton {
+  @extend .AlertCard;
+  @extend .CardButton;
+  
+  &.MuiPaper-root {
+    border-color: var(--base-color-neutral-300);
+  }
+
+  .AlertCard__titleSkeleton {
+    @extend .body-1;
+    width: 7.5rem;
+  }
+
+  .AlertCard__subtitleSkeleton {
+    @extend .caption;
+    width: 8.75rem;
+  }
+
+  .AlertCard__recipientIndicatorSkeleton {
+    width: 3rem;
+    height: 1.75rem;
+    /* Even setting it to "circular" doesn't make it look like designs, 
+     * but this + the setting does. */
+    border-radius: var(--border-radius-full);
+  }
+}

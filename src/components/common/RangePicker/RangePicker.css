@@ -1,0 +1,21 @@
+.RangePicker__popover {
+  .RangePicker__popoverPaper {
+    max-width: fit-content;
+    display: flex;
+
+    .RangePicker__dateTimePickers {
+      display: flex;
+      flex-direction: column;
+      gap: var(--standard-padding-s);
+      padding: 1.25rem;
+      border-left: .0625rem solid var(--base-color-neutral-400);
+
+      .RangePicker__actionButtonsContainer {
+        display: flex;
+        justify-content: flex-end;
+        gap: var(--standard-padding-s);
+        padding-top: var(--standard-padding-m);
+      }
+    }
+  }
+}

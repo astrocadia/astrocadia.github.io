@@ -1,0 +1,71 @@
+@import '../../../styles/typography.css';
+@import '../../../styles/effects/shadows.css';
+
+.ActionTriggerCard {
+    width: fit-content;
+    background-color: var(--background-workspace-color);
+    border-radius: var(--border-radius-s);
+    border: 0.0625rem solid var(--line-color);
+
+    &.ActionTriggerCard__fullWidth {
+        width: 100%;
+    }
+
+    .ActionTriggerCard__contentWrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: var(--standard-padding-s);
+        padding: var(--standard-padding-m);
+
+        & > *:first-child {
+            flex-grow: 1;
+        }
+
+        .ActionTriggerCard__label {
+            @extend .body-1;
+            color: var(--base-color-neutral-900);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+
+    &.ActionTriggerCard__disabled {
+        .ActionTriggerCard__label {
+            color: var(--typography-disabled-color);
+        }
+    }
+
+    &.ActionTriggerCard__success {
+        --button-primary-background-color: var(--base-color-green-100);
+        --button-primary-hover-background: var(--base-color-green-100);
+        --button-primary-typography-color: var(--base-color-green-800);
+        --button-primary-disabled-typography-color: var(--base-color-green-800);
+
+    }
+
+    &.ActionTriggerCard__busy {
+        .Button.MuiButton-root.primary {
+            background: var(--button-primary-active-background);
+
+        }
+        --button-primary-disabled-typography-color: var(--button-primary-active-typography-color);
+        .CircularProgress {
+            color: var(--button-primary-active-typography-color);
+            margin: 0.125rem;
+        }
+    }
+}
+
+.ActionTriggerCard:hover:not(.ActionTriggerCard__disabled),
+.ActionTriggerCard:focus:not(.ActionTriggerCard__disabled),
+.ActionTriggerCard.ActionTriggerCard__active:not(.ActionTriggerCard__disabled) {
+    @extend .shadow-m-1;
+
+    .ActionTriggerCard__contentWrapper {
+        .ActionTriggerCard__label {
+            color: var(--typography-primary-color);
+        }
+    }
+}

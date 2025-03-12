@@ -1,0 +1,22 @@
+.ExhibitCard {
+  .EntityCardBanner {
+    /* This is a bit of a css trick in order to apply the opacity to the background image without effecting the image itself */
+    &:before {
+      background-size: 0.875rem 0.875rem;
+      opacity: 0.5;
+      background-image: url('../assets/ExhibitBackground.svg');
+    }
+
+    & img {
+      height: 7.5rem;
+    }
+  }
+  
+  .ExhibitCard__healthState {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center; 
+    gap: var(--standard-padding-s);
+  }
+}

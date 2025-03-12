@@ -1,0 +1,81 @@
+@import '../../../../styles/typography.css';
+@import '../common/mainPanelCoplanarSubpageBlock.css';
+
+.MainPanelCoplanarSubpageBlockRow {
+  &.MuiCard-root {
+    &.MainPanelCoplanarSubpageBlockRow__clickable {
+      cursor: pointer;
+
+      &:focus-visible {
+        outline: 0.0625rem solid var(--base-color-neutral-500);
+        outline-offset: 0.25rem;
+      }
+    }
+
+    &.MainPanelCoplanarSubpageBlockRow__row {
+      /* A row variant MainPanelCoplanarSubpageBlockRow this is followed by another row variant MainPanelCoplanarSubpageBlockRow */
+      &:has(+ .MainPanelCoplanarSubpageBlockRow__row) {
+        margin-bottom: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border-bottom: 0;
+      }
+
+      /* A row variant MainPanelCoplanarSubpageBlockRow that is preceded by another row variant MainPanelCoplanarSubpageBlockRow */
+      & + .MainPanelCoplanarSubpageBlockRow__row {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
+    }
+
+    label.InputLabel.MuiInputLabel-root,
+    label.InputLabel.MuiInputLabel-root.Mui-error,
+    label.InputLabel.MuiInputLabel-root.Mui-focused,
+    label.MuiFormLabel-root,
+    label.MuiFormLabel-root.Mui-error,
+    label.MuiFormLabel-root.Mui-focused {
+      @extend .body-1;
+      margin: 0;
+    }
+
+    .FormControl.FormControl__horizontal {
+      align-items: center;
+      align-content: center;
+      gap: 1rem var(--standard-padding-m);
+      align-self: stretch;
+      flex-wrap: wrap;
+
+      > :first-child {
+        min-width: 13.75rem;
+        flex: 1 0 0;
+      }
+    }
+
+    .FormHelperText {
+      margin: 0;
+      font-size: var(--typescale-size-default-s);
+    }
+
+    &.MainPanelCoplanarSubpageBlockRow__condensed {
+      .FormControl.FormControl__horizontal {
+        flex-wrap: nowrap;
+      }
+    }
+
+    &:not(.MainPanelCoplanarSubpageBlockRow__condensed) {
+      .FormControl.FormControl__horizontal > :last-child {
+        min-width: 13.75rem;
+        max-width: 26.25rem;
+        flex: 1 0 0;
+      }
+    }
+  }
+}
+
+.MainPanelCoplanarSubpageBlockRow.MuiCard-root {
+  @extend %MainPanelCoplanarSubpageBlockShared;
+}
+
+.LinkCard + .MainPanelCoplanarSubpageBlockRow {
+  margin-top: var(--standard-padding-m);
+}

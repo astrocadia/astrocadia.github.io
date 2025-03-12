@@ -1,0 +1,6 @@
+:root {
+  --ExhibitStatus-border-color: var(--line-color);
+  --ExhibitStatus-border-style: solid;
+  --ExhibitStatus-border-width: 0.0625rem;
+  --ExhibitStatus-border-radius: var(--border-radius-s);
+}

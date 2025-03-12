@@ -1,0 +1,21 @@
+@import '../DatePickerCalendar/common/datePickerCalendar.css';
+@import '../MultiSectionDigitalClock/common/multiSectionDigitalClock.css';
+
+.DateTimePicker .MuiOutlinedInput-notchedOutline {
+    border-radius: var(--border-radius-s);
+    border: .0625rem solid var(--base-color-neutral-400);   
+}
+.DateTimePicker .MuiOutlinedInput-input {
+    color: var(--base-color-neutral-800);
+}
+.DateTimePicker__CalendarClockLayout {
+    .MuiMultiSectionDigitalClock-root:not(.MuiList-root) {
+        @extend %multiSectionDigitalClockShared;
+        margin: var(--standard-padding-m);
+    }
+}
+
+.base-Popper-root.MuiPickersPopper-root > .MuiPaper-root:has(> .DateTimePicker__CalendarClockLayout) {
+    @extend %dateTimePickerCalendarClockLayoutShared;
+    margin-left: -0.7rem;
+}

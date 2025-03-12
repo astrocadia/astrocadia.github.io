@@ -1,0 +1,61 @@
+@import '../../../common/buttons/common/button.css';
+@import '../common/mainPanelCoplanarSubpageBlock.css';
+
+.MainPanelCoplanarSubpageBlockCheckbox {
+  &.MuiCard-root {
+    min-height: 4.625rem;
+    margin-bottom: var(--standard-padding-m);
+    .MainPanelCoplanarSubpageBlockCheckbox__header {
+      align-items: center;
+
+      .MainPanelCoplanarSubpageCardHeader__title {
+        white-space: wrap;
+        color: var(--button-primary-typography-color);
+      }
+    }
+
+    .MainPanelCoplanarSubpageBlockCheckbox__checkbox {
+      padding: 0;
+    }
+
+    &:not(.MainPanelCoplanarSubpageBlockCheckbox__disabled) {
+      cursor: pointer;
+
+      &:hover {
+        background: var(--button-primary-hover-background);
+      }
+
+      &:active {
+        background: var(--button-primary-active-background);
+
+        .MainPanelCoplanarSubpageCardHeader__title {
+          color: var(--button-primary-active-typography-color);
+        }
+      }
+    }
+
+    &.MainPanelCoplanarSubpageBlockCheckbox__checked{
+      border: var(--button-focus-visible-outline);
+
+      .MainPanelCoplanarSubpageCardHeader__title {
+        color: var(--typography-primary-color);
+      }
+
+      &:active {
+        .MainPanelCoplanarSubpageCardHeader__title {
+          color: var(--button-input-active-typography-color);
+        }
+      }
+    }
+
+    &.MainPanelCoplanarSubpageBlockCheckbox__disabled {
+      .MainPanelCoplanarSubpageCardHeader__title {
+        color: var(--button-primary-disabled-typography-color)
+      }
+    }
+  }
+}
+
+.MainPanelCoplanarSubpageBlockCheckbox.MuiCard-root {
+  @extend %MainPanelCoplanarSubpageBlockShared;
+}

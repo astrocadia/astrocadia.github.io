@@ -1,0 +1,33 @@
+/* Taken from M3 design guides: https://m3.material.io/styles/motion/easing-and-duration/tokens-specs */
+:root {
+  --transitions-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --transitions-easing-standard-accelerate: cubic-bezier(0.3, 0, 1, 1);
+  --transitions-easing-standard-decelerate: cubic-bezier(0, 0, 0, 1);
+
+  --transitions-duration-short1: 50ms;
+  --transitions-duration-short2: 100ms;
+  --transitions-duration-short3: 150ms;
+  --transitions-duration-short4: 200ms;
+  --transitions-duration-medium1: 250ms;
+  --transitions-duration-medium2: 300ms;
+  --transitions-duration-medium3: 350ms;
+  --transitions-duration-medium4: 400ms;
+  --transitions-duration-long1: 450ms;
+  --transitions-duration-long2: 500ms;
+  --transitions-duration-long3: 550ms;
+  --transitions-duration-long4: 600ms;
+  --transitions-duration-extraLong1: 700ms;
+  --transitions-duration-extraLong2: 800ms;
+  --transitions-duration-extraLong3: 900ms;
+  --transitions-duration-extraLong4: 1000ms;
+}
+
+%transition-standard-entering {
+  transition-timing-function: var(--transitions-easing-decelerate);
+  transition-duration: var(--transitions-duration-medium2);
+}
+
+%transition-standard-exiting {
+  transition-timing-function: var(--transitions-easing-accelerate);
+  transition-duration: var(--transitions-duration-medium2);
+}

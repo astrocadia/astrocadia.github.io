@@ -1,0 +1,218 @@
+@import 'react-big-calendar/lib/css/react-big-calendar.css';
+@import '../../styles/typography.css';
+
+/* ============================
+   Big Calendar Container
+   ============================ */
+.BigCalendar {
+  --bc-today-color: rgba(var(--base-color-neutral-200-rgb-raw), 0.5);
+
+  &.rbc-calendar {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--standard-padding-l);
+
+    /* ============================
+       Today Highlight
+       ============================ */
+    .rbc-today {
+      background: transparent;
+    }
+
+    /* ============================
+       All-Day Cell
+       ============================ */
+    .rbc-allday-cell {
+      display: none; 
+      /* For now, hide element based on design review */
+      /* border: var(--standard-border);
+      border-bottom: none;
+      border-radius: var(--border-radius-s) var(--border-radius-s) 0 0;
+      height: var(--border-radius-s);
+
+      .rbc-today {
+        background: var(--bc-today-color);
+      } */
+    }
+
+    /* ============================
+       Headers and Time Views
+       ============================ */
+    .rbc-time-header-content,
+    .rbc-time-view,
+    .rbc-time-header,
+    .rbc-header {
+      border: none;
+      align-content: center;
+      .rbc-time-header-cell {
+        @extend .caption;
+        color: var(--typography-secondary-color);
+      }
+    }
+
+    .rbc-time-header.rbc-overflowing {
+      /* RBC forces a 14px margin in styles, which breaks column alignment.  */
+      margin-right: 1rem !important;
+    }
+
+    .rbc-header {
+      height: 2.375rem;
+    }
+
+    /* ============================
+       Event Styles
+       ============================ */
+    .rbc-events-container {
+      margin-right: 0;
+    }
+
+    .rbc-event,
+    .rbc-background-event {
+      padding-left: 0;
+      padding-right: 0;
+      border: none;
+      background: none;
+      overflow: visible;
+      &:active,
+      &.rbc-selected {
+        outline: none;
+      }
+    }
+
+    /* ============================
+       Time Content Styling
+       ============================ */
+    .rbc-time-content {
+      border: none;
+      border-radius: var(--border-radius-s);
+    }
+
+    .rbc-time-header-gutter {
+      width: 3rem;
+      align-content: center;
+      padding-bottom: .5rem;
+    }
+
+    /* ============================
+       Time Column Configuration
+       ============================ */
+    .rbc-time-column {
+      .rbc-timeslot-group {
+        min-height: 3.625rem;
+        padding: var(--standard-padding-s) 0;
+        &:first-of-type {
+          border-top: var(--standard-border);
+        }
+
+        .rbc-time-slot {
+          border: none;
+        }
+
+        &:last-of-type {
+        
+          .rbc-time-slot {
+            border: none;
+          }
+        }
+      }
+    }
+
+    /* ============================
+       Time Gutter Styling
+       ============================ */
+    .rbc-time-gutter {
+      &.rbc-time-column {
+        width: 4rem;
+
+        .rbc-timeslot-group {
+          border: none;
+          min-height: 4.625rem;
+          &:first-of-type {
+            border-right: none;
+          }
+          .rbc-label {
+            @extend .caption;
+            color: var(--base-color-neutral-900);
+            position: relative;
+            padding-right: var(--standard-padding-m);
+            top: -0.7rem;
+          }
+        }
+      }
+    }
+
+    /* ============================
+       Day Column Styling
+       ============================ */
+    .rbc-day-slot {
+      &.rbc-today {
+        background: var(--bc-today-color);
+        .rbc-timeslot-group {
+          &:nth-last-of-type(3) {
+            border-bottom: var(--standard-border);
+          }
+        }
+      }
+      /* This is used for rounding off the edges of the calendar - it's close to working but theres a border that's not part 
+      of any element that I can trace showing up on the left and right making it look strange  */
+      /* &:last-of-type{
+        .rbc-timeslot-group {
+          &:first-of-type{
+            border-radius: 0 var(--border-radius-s) 0 0;
+          }
+          &:nth-last-of-type(2) {
+            border-radius:0 0 var(--border-radius-s) 0;
+          }
+        }
+      }
+      &:nth-last-of-type(7){
+        .rbc-timeslot-group {
+          &:first-of-type{
+            border-radius: var(--border-radius-s) 0 0 0;
+          }
+          &:nth-last-of-type(2) {
+            border-radius:0 0 0 var(--border-radius-s);
+          }
+        }
+      } */
+      .rbc-timeslot-group {
+        border-bottom: none;
+        min-height: 4.625rem;
+        &:not(:first-of-type) {
+          border-top: var(--standard-border);
+        }
+
+        &:nth-last-of-type(2) {
+          border-bottom: var(--standard-border); 
+        }
+      }
+    }
+
+    /* ============================
+       Event Label Visibility
+       ============================ */
+    .rbc-event-label {
+      display: none;
+    }
+
+    /* ============================
+       Current Time Indicator
+       ============================ */
+    .rbc-current-time-indicator {
+      background-color: var(--base-color-neutral-900);
+      height: 0.125rem;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -0.25rem;
+        left: -0.35rem;
+        width: 0.625rem;
+        height: 0.625rem;
+        background-color: var(--base-color-neutral-900);
+        border-radius: var(--border-radius-full);
+      }
+    }
+  }
+}

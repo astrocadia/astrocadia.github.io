@@ -1,0 +1,50 @@
+.UserInviteInputField {
+  .MuiInput-root {
+    color: var(--tpyography-primary-color);
+    padding-right: var(--standard-padding-xs);
+    &:hover {
+      color: var(--input-color-active);
+    }
+    &:focus-within:hover,
+    &:hover:active {
+      border-color: var(--input-border-color-active);
+      color: var(--input-color-active);
+    }
+    .UserInviteInputField__button {
+      &.MuiButton-root {
+        padding-right: var(--standard-padding-xs);
+        color: var(--base-color-neutral-900);
+
+        > .MuiButton-icon {
+          > .MuiSvgIcon-root {
+            margin-top: 0.0625rem;
+          }
+        }
+
+        &:focus-visible {
+          outline-offset: -0.0625rem;
+        }
+      }
+
+      &.Mui-disabled {
+        color: var(--typography-disabled-color);
+      }
+    }
+
+    &.Mui-disabled {
+      &:hover {
+        border-color: var(--base-color-neutral-500);
+      }
+    }
+    &.Mui-error {
+      &:hover {
+        border-color: var(--input-error-color);
+      }
+    }
+  }
+  &.UserInviteInputField__inviteActive {
+    .MuiInput-root {
+      color: var(--base-color-neutral-900);
+    }
+  }
+}

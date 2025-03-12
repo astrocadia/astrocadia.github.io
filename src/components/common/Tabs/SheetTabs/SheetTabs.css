@@ -1,0 +1,23 @@
+.SheetTabs {
+  .SheetTabs__TabDropdown {
+    width: stretch;
+    max-width: unset;
+
+    &.Tab__selected {
+      background-color: transparent;
+      color: var(--tab-unselected-color);
+    }
+  }
+}
+
+.SheetTabs__SheetTabs {
+  &.StandardTabs {
+    .Tab {
+      min-width: stretch;
+    }
+
+    .MuiTabs-flexContainer {
+      gap: 0;
+    }
+  }
+}

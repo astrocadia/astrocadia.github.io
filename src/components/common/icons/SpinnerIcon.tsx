@@ -1,0 +1,15 @@
+import { SvgIcon, SvgIconComponent, SvgIconProps } from './SvgIcon';
+
+const SpinnerSVGPath = (
+  <path
+    fillRule='evenodd'
+    clipRule='evenodd'
+    d='M16.8783 14.0852C17.6125 12.849 18 11.4378 18 10L16 10C16 13.3137 13.3137 16 10 16C6.68629 16 4 13.3137 4 10C4 7.56822 5.44669 5.47433 7.52637 4.53202L6.70263 2.71115C5.39265 3.30377 4.26658 4.23848 3.44289 5.41696C2.61921 6.59543 2.12834 7.97411 2.02194 9.40797C1.91554 10.8418 2.19752 12.2779 2.83824 13.565C3.47896 14.8521 4.45473 15.9428 5.66289 16.7223C6.87106 17.5018 8.26697 17.9413 9.70378 17.9945C11.1406 18.0478 12.5652 17.7128 13.8277 17.0248C15.0903 16.3369 16.1441 15.3214 16.8783 14.0852Z'
+  />
+);
+
+export const SpinnerIcon: SvgIconComponent = (props: SvgIconProps) => (
+  <SvgIcon {...props}>{SpinnerSVGPath}</SvgIcon>
+);
+
+SpinnerIcon.muiName = 'SpinnerIcon';

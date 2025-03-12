@@ -1,0 +1,65 @@
+.NumberComponentProperty {
+  &.MuiCard-root,
+  & {
+    display: flex;
+    flex-direction: column;
+    min-height: 4.375rem;
+    justify-content: center;
+    min-width: 0;
+    align-items: normal;
+
+    .NumberComponentProperty__propertyValues {
+      display: flex;
+      flex-direction: column;
+      gap: var(--standard-padding-s);
+      width: 100%;
+
+      .NumberComponentProperty__row {
+        display: flex;
+        flex-direction: row;
+        gap: var(--standard-padding-s);
+
+        .MuiFormControl-root {
+          > div {
+            width: 100%;
+          }
+
+          /* disable arrows on number input */
+          input::-webkit-outer-spin-button,
+          input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+
+          input[type='number'] {
+            -moz-appearance: textfield;
+          }
+
+          .MuiInputBase-root {
+            .MuiInputBase-input {
+              text-align: left;
+            }
+          }
+        }
+
+        .NumberComponentProperty__rowIndex {
+          max-width: 4rem;
+          justify-content: center;
+          align-items: center;
+          &.MuiFormControl-root {
+            .MuiInputBase-root .MuiInputBase-input::placeholder {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+
+    .NumberComponentProperty__adornmentDot {
+      display: flex;
+      justify-content: center;
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+}

@@ -1,0 +1,149 @@
+@import '../../../styles/typography.css';
+@import './common/datePickerCalendar.css';
+
+.DatePickerCalendar {
+  &.MuiPickersLayout-root {
+    font-family: var(--typography-family-default);
+    min-width: min-content;
+    width: min-content;
+
+    .MuiPickersLayout-contentWrapper {
+      width: fit-content;
+
+      &:not(:first-child) {
+        border-left: var(--standard-border);
+      }
+
+      .MuiDateCalendar-root {
+        overflow: visible;
+        margin: var(--standard-padding-m);
+        height: max-content;
+        width: fit-content;
+        justify-content: center;
+
+        .MuiDayCalendar-root, .MuiDayCalendar-monthContainer {
+          display: flex;
+          flex-direction: column;
+          gap: var(--standard-padding-s);
+
+          .MuiPickersSlideTransition-root {
+            /* 5 rows of buttons */
+            min-height: 13.875rem;
+          }
+        }
+
+        .MuiMonthCalendar-root {
+          /* This is 3 month button widths (5.92rem) + 2 var(--standard-padding-s)*/
+          width: 18.76rem;
+          /* This is 4 month button widths (5.92rem) + 3 var(--standard-padding-s)*/
+          max-width: 25.18rem;
+          padding: 0;
+          gap: var(--standard-padding-s);
+          justify-content: center;
+        }
+
+        .MuiYearCalendar-root {
+          width: 5rem;
+          gap: var(--standard-padding-s);
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          padding: 0;
+        }
+      }
+    }
+
+    .MuiDayCalendar-weekDayLabel {
+      margin: 0;
+    }
+
+    .MuiDayCalendar-weekContainer, .MuiDayCalendar-header {
+      max-width: fit-content;
+      gap: var(--standard-padding-s);
+      margin: 0;
+    }
+
+    .MuiPickersLayout-actionBar {
+      padding: 1rem;
+    }
+
+    .MuiButtonBase-root {
+      text-transform: capitalize;
+    }
+
+    .MuiPickersDay-dayOutsideMonth {
+      color: var(--base-color-neutral-700);
+    }
+
+    .MuiPickersMonth-root, .MuiPickersYear-root {
+      flex-basis: inherit;
+    }
+
+    .MuiPickersMonth-monthButton {
+      height: 3rem;
+      min-width: 5.92rem;
+      border-radius: var(--border-radius-full);
+      margin: 0;
+
+      &.Mui-disabled {
+        color: var(--datePickerCalendar-disabled-color);
+      }
+    }
+
+    .MuiPickersYear-yearButton {
+      height: 3rem;
+      min-width: 100%;
+      border-radius: var(--border-radius-full);
+      margin: 0;
+
+      &.Mui-disabled {
+        color: var(--datePickerCalendar-disabled-color);
+      }
+    }
+
+    .MuiPickersDay-today {
+      border: 0.0625rem solid var(--base-color-neutral-400);
+      &.Mui-selected {
+        color: var(--datePickerCalendar-color);
+        background-color: var(--datePickerCalendar-background-color);
+        &:focus {
+          background-color: var(--datePickerCalendar-background-color);
+        }
+        &:hover {
+          background: var(--datePickerCalendar-hover-background);
+        }
+        &:active,
+        &:active:focus {
+          color: var(--datePickerCalendar-active-color);
+          background: var(--datePickerCalendar-active-background);
+        }
+      }
+    }
+  }
+
+  .MuiPickersDay-root {
+    font-size: 0.8rem;
+    height: 2.375rem;
+    min-width: 2.375rem;
+    margin: 0;
+
+    &.Mui-disabled {
+      &.MuiPickersDay-dayWithMargin {
+        color: var(--datePickerCalendar-disabled-color);
+      }
+    }
+  }
+
+  .MuiPickersDay-root,
+  .MuiPickersMonth-monthButton,
+  .MuiPickersYear-yearButton {
+    @extend %datePickerCalendarButtonShared;
+  }
+
+  .MuiDayCalendar-weekDayLabel {
+    font-size: 0.75rem;
+    height: 2.375rem;
+    min-width: 2.375rem;
+    color: var(--base-color-neutral-700);
+  }
+}

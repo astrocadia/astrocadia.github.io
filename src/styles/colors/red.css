@@ -1,0 +1,33 @@
+:root {
+  /* #931d23 */
+  --base-color-red-800-rgb-raw: 147, 29, 35;
+  --base-color-red-800: rgb(var(--base-color-red-800-rgb-raw));
+
+  /* #b51705 */
+  --base-color-red-700-rgb-raw: 181, 23, 5;
+  --base-color-red-700: rgb(var(--base-color-red-700-rgb-raw));
+
+  /* #c72918 */
+  --base-color-red-600-rgb-raw: 199, 41, 24;
+  --base-color-red-600: rgb(var(--base-color-red-600-rgb-raw));
+
+  /* #db2814 */
+  --base-color-red-500-rgb-raw: 219, 40, 20;
+  --base-color-red-500: rgb(var(--base-color-red-500-rgb-raw));
+
+  /* #ed311c */
+  --base-color-red-400-rgb-raw: 237, 49, 28;
+  --base-color-red-400: rgb(var(--base-color-red-400-rgb-raw));
+
+  /* #f06c5d */
+  --base-color-red-300-rgb-raw: 240, 108, 93;
+  --base-color-red-300: rgb(var(--base-color-red-300-rgb-raw));
+
+  /* #f5aca4 */
+  --base-color-red-200-rgb-raw: 245, 172, 164;
+  --base-color-red-200: rgb(var(--base-color-red-200-rgb-raw));
+
+  /* #f9ebea */
+  --base-color-red-100-rgb-raw: 249, 235, 234;
+  --base-color-red-100: rgb(var(--base-color-red-100-rgb-raw));
+}

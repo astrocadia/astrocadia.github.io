@@ -1,0 +1,11 @@
+.DotContainer {
+  display: inline-flex;
+
+  .Dot {
+    width: 0.375rem;
+    height: 0.375rem;
+    flex-shrink: 0;
+    border-radius: var(--border-radius-full);
+    background-color: var(--base-color-green-400);
+  }
+}

@@ -1,0 +1,11 @@
+.UserInviteConfirmedDialog {
+  .DialogContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    
+    .UserInviteConfirmedDialog__email {
+      overflow-wrap: break-word;
+    }
+  }
+}

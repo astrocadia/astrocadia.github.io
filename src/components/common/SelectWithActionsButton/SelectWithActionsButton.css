@@ -1,0 +1,21 @@
+.SelectWithActionsButton {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--button-input-typography-color);
+
+  & svg.SelectWithActionsButton__icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--base-color-neutral-700);
+  }
+}
+
+.Mui-disabled {
+  .SelectWithActionsButton {
+    .SelectWithActionsButton__icon {
+      color: var(--base-color-neutral-500);
+    }
+  }
+}

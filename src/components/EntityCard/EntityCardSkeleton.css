@@ -1,0 +1,43 @@
+.EntityCardSkeleton {
+  border-radius: var(--border-radius-s);
+  border: 0.0625rem solid var(--line-color);
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  .EntityCardSkeleton__banner {
+    border-top-left-radius: var(--border-radius-s);
+    border-top-right-radius: var(--border-radius-s);
+    height: 100%;
+  }
+
+  .EntityCardSkeleton__content {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: var(--standard-padding-s);
+    padding: var(--standard-padding-m);
+
+    .EntityCardSkeleton__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      height:1.5rem;
+      gap: 0.75rem;
+      width: 100%;
+
+      .EntityCardSkeleton__headerText.MuiSkeleton-root {
+        height: 1rem;
+        width: 10rem;
+      }
+
+      .EntityCardSkeleton__headerIcon {
+        height: 1.25rem;
+        width: 1.25rem;
+      }
+    }
+  }
+}

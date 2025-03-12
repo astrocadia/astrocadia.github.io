@@ -1,0 +1,37 @@
+@import '../../../../styles/transitions.css';
+
+.BreadcrumbWrapper {
+  border-radius: var(--border-radius-full);
+  color: var(--typography-primary-color);
+  height: 100%;
+  @extend %transition-standard-exiting;
+  transition-property: padding background-color;
+
+  &:has(.Breadcrumb__avatar) {
+    padding-left: var(--standard-padding-s);
+  }
+
+  &.BreadcrumbWrapper__selected {
+    background-color: var(--base-color-neutral-200);
+  }
+
+  &:focus-visible,
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(var(--base-color-neutral-900-rgb-raw), 0.08);
+    @extend %transition-standard-entering;
+    transition-property: padding background-color;
+  }
+
+  &:active {
+    background-color: rgba(var(--base-color-neutral-900-rgb-raw), 0.12);
+    color: var(--button-primary-active-typography-color);
+  }
+
+  &.BreadcrumbWrapper__selected,
+  &:active,
+  &:focus-visible,
+  &:hover {
+    padding-right: 0.625rem;
+  }
+}

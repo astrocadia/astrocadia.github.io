@@ -1,0 +1,13 @@
+@import '../DatePickerCalendar/common/datePickerCalendar.css';
+
+.DatePicker .MuiOutlinedInput-notchedOutline {
+    border-radius: var(--border-radius-s);
+    border: .0625rem solid var(--base-color-neutral-400);   
+}
+.DatePicker .MuiOutlinedInput-input {
+    color: var(--base-color-neutral-800);
+}
+.base-Popper-root.MuiPickersPopper-root > .MuiPaper-root:has(> .DatePickerCalendar) {
+    @extend %dateTimePickerCalendarClockLayoutShared;
+    margin-left: -0.7rem;
+}

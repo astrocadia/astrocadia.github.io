@@ -1,0 +1,11 @@
+.DatePickerBar {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: var(--standard-padding-s);
+
+    .DatePickerBar__datePicker {
+        flex-grow: 1;
+    }
+}

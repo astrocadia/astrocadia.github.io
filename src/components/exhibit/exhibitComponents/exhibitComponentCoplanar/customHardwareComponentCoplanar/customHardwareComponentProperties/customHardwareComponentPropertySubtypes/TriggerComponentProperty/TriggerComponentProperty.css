@@ -1,0 +1,34 @@
+.TriggerComponentProperty {
+  &.MuiCard-root {
+    display: flex;
+    flex-direction: column;
+    gap: var(--standard-padding-m);
+    min-height: 4.375rem;
+    justify-content: center;
+    min-width: 0;
+    align-items: normal;
+
+    .TriggerComponentProperty__labelAndActionWrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-grow: 1;
+      gap: var(--standard-padding-m);
+
+      .TriggerComponentProperty__label {
+        overflow: hidden;
+        & > span {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+
+      .TriggerComponentProperty__buttonWrapper {
+        display: flex;
+        gap: var(--standard-padding-s);
+        align-items: center;
+      }
+    }
+  }
+}

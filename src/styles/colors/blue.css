@@ -1,0 +1,41 @@
+:root {
+  /* #005280 */
+  --base-color-blue-800-rgb-raw: 0, 82, 128;
+  --base-color-blue-800: rgb(var(--base-color-blue-800-rgb-raw));
+
+  /* #005f94 */
+  --base-color-blue-700-rgb-raw: 0, 95, 148;
+  --base-color-blue-700: rgb(var(--base-color-blue-700-rgb-raw));
+
+  /* #006dab */
+  --base-color-blue-600-rgb-raw: 0, 109, 171;
+  --base-color-blue-600: rgb(var(--base-color-blue-600-rgb-raw));
+
+  /* #007abf */
+  --base-color-blue-500-rgb-raw: 0, 122, 191;
+  --base-color-blue-500: rgb(var(--base-color-blue-500-rgb-raw));
+
+  /* #0187d4 */
+  --base-color-blue-400-rgb-raw: 1, 135, 212;
+  --base-color-blue-400: rgb(var(--base-color-blue-400-rgb-raw));
+
+  /* #46a8e0 */
+  --base-color-blue-300-rgb-raw: 70, 168, 224;
+  --base-color-blue-300: rgb(var(--base-color-blue-300-rgb-raw));
+
+  /* #95cded */
+  --base-color-blue-200-rgb-raw: 149, 205, 237;
+  --base-color-blue-200: rgb(var(--base-color-blue-200-rgb-raw));
+
+  /* #eaf4f9 */
+  --base-color-blue-100-rgb-raw: 234, 244, 249;
+  --base-color-blue-100: rgb(var(--base-color-blue-100-rgb-raw));
+
+  /* #b5e2f9 */
+  --palette-blue-light-rgb-raw: 181, 226, 249;
+  --palette-blue-light: rgb(var(--palette-blue-light-rgb-raw));
+
+  /* #3d6f91 */
+  --palette-blue-dark-rgb-raw: 61, 111, 145;
+  --palette-blue-dark: rgb(var(--palette-blue-dark-rgb-raw));
+}

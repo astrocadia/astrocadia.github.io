@@ -1,0 +1,7 @@
+.FeedbackMessagePanelActions {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--standard-padding-s);
+  justify-content: center;
+}

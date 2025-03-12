@@ -1,0 +1,5 @@
+.Skeleton {
+  &.MuiSkeleton-root {
+    background-color: var(--base-color-neutral-300);
+  }
+}

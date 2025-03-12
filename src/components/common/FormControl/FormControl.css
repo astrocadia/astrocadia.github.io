@@ -1,0 +1,10 @@
+.FormControl {
+  &.FormControl__horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1.5rem;
+    flex-wrap: nowrap;
+  }
+}

@@ -1,0 +1,62 @@
+@import '../../../styles/effects/shadows.css';
+@import '../../../styles/typography.css';
+
+.Dialog {
+  .MuiDialog-container .MuiDialog-paper {
+    @extend .shadow-m-1;
+    border-radius: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 1rem 1.5rem;
+    max-width: 22.5rem;
+
+    &.MuiDialog-paperFullScreen {
+      border-radius: 0;
+      padding: 1rem 1.25rem;
+      max-width: none;
+
+      .DialogTitle {
+        margin-top: 1rem;
+      }
+
+      /* Ensure the proper top margin if the DialogContent exists without a DialogTitle */
+      .DialogContent:first-child.MuiDialogContent-root {
+        margin-top: 1rem;
+      }
+
+      /* Ensure the proper bottom margin if the DialogContent exists without a DialogActions */
+      .DialogContent.MuiDialogContent-root:not(:has(+ .DialogActions)) {
+        margin-bottom: 1rem;
+      }
+
+      .DialogActions.MuiDialogActions-root {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .DialogTitle {
+      margin-bottom: 1rem;
+    }
+
+    .DialogActions.MuiDialogActions-root {
+      margin-top: 1.5rem;
+    }
+
+    .DialogTitle + .DialogActions.MuiDialogActions-root {
+      margin-top: 0;
+    }
+  }
+
+  .MuiBackdrop-root {
+    background-color: rgba(var(--base-color-neutral-900-rgb-raw), 0.2);
+  }
+
+  .MuiDialog-root .DialogTitle h2 {
+    @extend .subheading;
+  }
+  
+  .MuiDialog-root .DialogTitle h3 {
+    @extend .caption;
+  }
+}

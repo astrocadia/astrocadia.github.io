@@ -1,0 +1,52 @@
+.UserAvatarMenu {
+  --userAvatarMenu-chevron-color: var(--base-color-neutral-700);
+  padding: 0 var(--standard-padding-s);
+  display: grid;
+  grid-template-columns: min-content min-content;
+  align-items: center;
+  height: 100%;
+
+  .UserAvatarMenu__openIndicator {
+    color: var(--userAvatarMenu-chevron-color);
+    overflow: hidden;
+    height: 1.25rem;
+    width: 0;
+  }
+
+  .MuiAvatar-root {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  &.UserAvatarMenu__open {
+    .UserAvatarMenu__openIndicator {
+      width: 1.25rem;
+      visibility: visible;
+      display: initial;
+      transform: rotate(-90deg);
+      transition-timing-function: ease-in-bounce;
+      transition-duration: var(--transitions-duration-medium2);
+      transition-property: transform, width;
+    }
+  }
+
+  &:focus-visible,
+  &:hover {
+    --userAvatarMenu-chevron-color: var(--base-color-neutral-900);
+    cursor: pointer;
+
+    .UserAvatarMenu__openIndicator {
+      width: 1.25rem;
+      overflow: visible;
+      display: initial;
+      transform: rotate(90deg);
+      transition-timing-function: ease-in-bounce;
+      transition-duration: var(--transitions-duration-medium2);
+      transition-property: width;
+    }
+  }
+
+  &:active {
+    --userAvatarMenu-chevron-color: var(--base-color-neutral-800);
+  }
+}

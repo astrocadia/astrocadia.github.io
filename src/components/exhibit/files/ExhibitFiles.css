@@ -1,0 +1,16 @@
+.ExhibitFiles__content {
+    display: flex;
+    gap: var(--standard-padding-m);
+    flex-direction: column;  
+
+  .ExhibitFiles__toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .ExhibitFiles__uploadButton {
+      max-width: max-content;
+    }
+  }
+  
+}

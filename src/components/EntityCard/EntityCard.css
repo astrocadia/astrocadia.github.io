@@ -1,0 +1,57 @@
+@import '../../styles/typography.css';
+@import '../../styles/effects/shadows.css';
+
+.EntityCard {
+  &.MuiCard-root {
+    border-radius: var(--border-radius-s);
+    border: 0.0625rem solid var(--line-color);
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    &.EntityCard__clickable {
+      cursor: pointer;
+    }
+
+    &.EntityCard__selected {
+      border-color: var(--line-color-selected);
+    }
+
+    .EntityCard__content {
+      flex-grow: 1;
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      gap: var(--standard-padding-s);
+      padding: var(--standard-padding-m);
+    }
+  }
+}
+
+.EntityCard.MuiCard-root .EntityCard__content > *:not(.EntityCardHeader) {
+  @extend .caption;
+}
+
+.EntityCard.EntityCard__clickable.MuiCard-root:hover {
+  @extend .shadow-m-1;
+  border-radius: var(--border-radius-s);
+}
+
+/* NOTE: This media query hack seems to allow the selection of styles for Safari only */
+/*       There is no guarantee that this will work in the future */
+@media not all and (min-resolution: 0.001dpcm) {
+  @media {
+    /* Safari fix for drop-shadows */
+    /* Safari views the drop-shadow as an extension of the container so we need to make the overflow visible */
+    .EntityCard.EntityCard__clickable.MuiCard-root:hover {
+      overflow: visible;
+    }
+
+    /* Safari isn't clipping the border-radius correctly when the drop-shadow is applied, this will clip the child object
+       so that the border-radius "looks" correct */
+    .EntityCard.MuiCard-root .EntityCardBanner {
+      border-radius: var(--border-radius-s);
+    }
+  }
+}

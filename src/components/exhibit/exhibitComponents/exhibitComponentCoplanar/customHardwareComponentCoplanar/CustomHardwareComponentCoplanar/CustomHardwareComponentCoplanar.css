@@ -1,0 +1,16 @@
+.CustomHardwareComponentCoplanar {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .CustomHardwareComponentCoplanar__contentWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--content-padding-horizontal);
+    .CustomHardwareComponentCoplanar__subpageCardWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: var(--standard-padding-m);
+    }
+  }
+}

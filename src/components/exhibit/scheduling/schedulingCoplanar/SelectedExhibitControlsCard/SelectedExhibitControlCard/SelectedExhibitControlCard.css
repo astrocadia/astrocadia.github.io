@@ -1,0 +1,5 @@
+.SelectedExhibitControlCard {
+  &.MuiCard-root {
+    min-height: 4.375rem;
+  }
+}

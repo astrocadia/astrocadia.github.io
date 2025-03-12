@@ -1,0 +1,49 @@
+:root {
+  --AppBreadcrumb-height: 3.75rem;
+  --AppBreadcrumb-padding: 0.375rem;
+
+  /* The way to calculate this number:
+   *
+   * · A - minimum[in the case of a range] total screen width
+   * · B - total width of non-breadcrumb items
+   *
+   * (A - B) / 16px ~= width in rem
+   *
+   * Currently B is around 132px.
+   *
+   *  Use this calculation as a starting point, adjust screen to the smallest width of the range.
+   * Double check that on hover of a breadcrumb item, the UserAvatar item does not move
+   */
+  --AppBreadcrumbItemList-max-width: 90.25rem;
+
+  /* Utilize this number to indicate the number of breadcrumbs to show.  This allows
+   * us to allow the breadcrumbs to grow to the available space in a controlled manor.
+   */
+  --AppBreadcrumbItemList-number-of-items: 3;
+
+  @media (1200px <= width < 1600px) {
+    --AppBreadcrumbItemList-max-width: 65.25rem;
+  }
+
+  @media (1000px <= width < 1200px) {
+    --AppBreadcrumbItemList-max-width: 52.75rem;
+  }
+
+  @media (800px <= width < 1000px) {
+    --AppBreadcrumbItemList-max-width: 40rem;
+  }
+
+  @media (width < 800px) {
+    --AppBreadcrumb-height: 4rem;
+    --AppBreadcrumb-padding: 0.5rem;
+    --AppBreadcrumbItemList-max-width: 14.5rem;
+  }
+}
+
+%appBreadcrumbShared {
+  height: var(--AppBreadcrumb-height);
+  padding: var(--AppBreadcrumb-padding);
+  border-radius: var(--border-radius-full);
+  margin: 0.75rem; /* Need actual value for this */
+  background-color: var(--background-workspace-color);
+}

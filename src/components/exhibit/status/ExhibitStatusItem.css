@@ -1,0 +1,84 @@
+@import '../../../styles/typography.css';
+@import './common/exhibitStatus.css';
+
+.ExhibitStatusItem {
+  &.MuiListItem-root {
+    cursor: default;
+    align-items: flex-start;
+    padding: var(--standard-padding-m);
+    column-gap: var(--content-padding-vertical);
+    border: var(--ExhibitStatus-border-width) var(--ExhibitStatus-border-style)
+      var(--ExhibitStatus-border-color);
+    /* border-radius: var(--ExhibitStatus-border-radius) var(--ExhibitStatus-border-radius) 0 0; */
+
+    .ExhibitStatusItem__statusValue {
+      color: var(--base-color-neutral-900);
+    }
+
+    .ExhibitStatusItem__horizontalChildren,
+    .ExhibitStatusItem__veriticalChildren {
+      overflow: hidden;
+      word-break: break-word;
+    }
+
+    .ExhibitStatusItem__horizontalChildren {
+      flex: 1;
+    }
+    .ExhibitStatusItem__veriticalChildren {
+      display: flex;
+      flex-direction: column;
+      row-gap: var(--standard-padding-xs);
+    }
+
+    .ExhibitStatusItem__link {
+      .LinkDecorator__text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      > .MuiSvgIcon-root {
+        margin-right: 0.4rem;
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+
+      &:focus-visible {
+        outline-offset: -0.0625rem;
+        outline: var(--ExhibitStatus-border-width)
+          var(--ExhibitStatus-border-style) var(--base-color-neutral-500);
+      }
+    }
+
+    &:first-child {
+      border-radius: var(--ExhibitStatus-border-radius) var(--ExhibitStatus-border-radius) 0 0;
+    }
+
+    &:has(+ .ExhibitStatusGroup) {
+      border-radius: 0 0 var(--ExhibitStatus-border-radius) var(--ExhibitStatus-border-radius);
+      border-bottom: var(--ExhibitStatus-border-width) var(--ExhibitStatus-border-style)
+        var(--ExhibitStatus-border-color);
+    }
+
+    &:has(+ li) {
+      border-bottom: inherit;
+    }
+
+    &:last-child {
+      border-radius: 0 0 var(--ExhibitStatus-border-radius) var(--ExhibitStatus-border-radius);
+    }
+
+    &:only-child {
+      border-radius: var(--ExhibitStatus-border-radius);
+    }
+  }
+}
+
+.ExhibitStatusGroup + .ExhibitStatusItem {
+  border-radius: var(--ExhibitStatus-border-radius) var(--ExhibitStatus-border-radius) 0 0;
+}
+
+.ExhibitStatusItem .ExhibitStatusItem__horizontalChildren,
+.ExhibitStatusItem .ExhibitStatusItem__verticalChildren {
+  @extend .body-1;
+}

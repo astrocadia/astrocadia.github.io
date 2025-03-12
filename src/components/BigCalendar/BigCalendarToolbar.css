@@ -1,0 +1,9 @@
+.BigCalendarToolbar {
+  display: flex;
+  gap: var(--standard-padding-s);
+  
+  .BigCalendarToolbar__label {
+    display: flex;
+    align-items: center;
+  }
+}

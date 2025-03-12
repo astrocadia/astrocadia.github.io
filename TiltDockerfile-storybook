@@ -1,0 +1,24 @@
+FROM node:20-alpine3.18
+# Set the working directory in the container to /app
+WORKDIR /usr/src/app
+
+# Copy package.json and package-lock.json into the directory /app in the container
+# COPY package*.json ./
+
+# Copy the application into the container
+COPY . .
+
+# Install the application dependencies inside the container
+RUN npm install
+
+# Build the Storybook static site
+RUN npm run build-storybook
+
+# Use nginx to serve the Storybook static site
+FROM nginx:alpine
+
+# Copy the Storybook build output to replace the default nginx contents.
+COPY --from=0 /usr/src/app/storybook-static /usr/share/nginx/html
+
+# Expose port 80
+EXPOSE 80

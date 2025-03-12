@@ -1,0 +1,125 @@
+@import '../../../../styles/typography.css';
+@import '../../../../styles/transitions.css';
+
+.Breadcrumb {
+  --breadcrumb-typography-color: var(--typography-secondary-color);
+  --breadcrumb-chevron-color: var(--base-color-neutral-700);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+
+  .Breadcrumb__name {
+    @extend %default-typography;
+    color: var(--breadcrumb-typography-color);
+    margin-right: 0.25rem;
+    margin-left: 0.25rem;
+    white-space: nowrap;
+    @extend %transition-standard-exiting;
+    transition-property: margin;
+  }
+
+  .Breadcrumb__avatar {
+    .MuiAvatar-root {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+
+  .Breadcrumb__avatar + .Breadcrumb__name {
+    margin-left: 0.5rem;
+  }
+  
+  .Breadcrumb__statusIcon {
+    padding-left: 0.5rem;
+    
+    .Badge {
+      height: 2rem;
+      width: 2rem;
+      
+      .MuiSvgIcon-root {
+        height: 1.25rem;
+        width: 1.25rem;
+      }
+    }
+  }
+
+  .Breadcrumb__chevron {
+    color: var(--breadcrumb-chevron-color);
+    transform: rotate(0deg);
+    @extend %transition-standard-exiting;
+    transition-property: transform;
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+
+  &:hover,
+  &:active,
+  &:focus-visible {
+    .Breadcrumb__chevron {
+      transform: rotate(90deg);
+      @extend %transition-standard-entering;
+      transition-property: transform;
+    }
+  }
+
+  &.Breadcrumb__selected {
+    --breadcrumb-typography-color: var(--typography-primary-color);
+    --breadcrumb-chevron-color: var(--base-color-neutral-700);
+
+    .Breadcrumb__chevron {
+      transform: rotate(-90deg);
+      @extend %transition-standard-entering;
+      transition-property: transform;
+    }
+  }
+
+  &:hover,
+  &:focus-visible,
+  &.Breadcrumb__selected:hover,
+  &.Breadcrumb__selected:focus-visible {
+    --breadcrumb-typography-color: var(--typography-primary-color);
+    --breadcrumb-chevron-color: var(--base-color-neutral-900);
+  }
+
+  &:active,
+  &.Breadcrumb__selected:active {
+    --breadcrumb-typography-color: var(--base-color-neutral-800);
+    --breadcrumb-chevron-color: var(--base-color-neutral-800);
+  }
+
+  &:hover,
+  &:active,
+  &:focus-visible,
+  &.Breadcrumb__selected {
+    .Breadcrumb__name {
+      margin-left: var(--standard-padding-m);
+    }
+
+    .Breadcrumb__avatar + .Breadcrumb__name,
+    .Breadcrumb__statusIcon + .Breadcrumb__name {
+      margin-left: 0.5rem;
+    }
+  }
+
+  &.Breadcrumb__primary {
+    --breadcrumb-typography-color: var(--typography-primary-color);
+
+    &:active {
+      --breadcrumb-typography-color: var(--base-color-neutral-800);
+    }
+
+    .Breadcrumb__chevron {
+      transform: rotate(90deg);
+    }
+
+    &.Breadcrumb__selected {
+      .Breadcrumb__chevron {
+        transform: rotate(-90deg);
+        @extend %transition-standard-entering;
+        transition-property: transform;
+      }
+    }
+  }
+}

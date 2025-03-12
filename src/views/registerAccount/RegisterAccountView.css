@@ -1,0 +1,46 @@
+@import '../../styles/typography.css';
+
+.RegisterAccountView {
+  & h1 {
+    @extend .body-2;
+    text-align: left;
+    font-size: 1.25rem;
+    margin: 0;
+  }
+
+  & form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: var(--content-padding-vertical);
+
+    & .RegisterAccountView__inputWrapper,
+    & .RegisterAccountView__actionsWrapper {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      gap: var(--standard-padding-m);
+
+      .RegisterAccountView__inputBodyText {
+        @extend .body-1;
+        text-align: left;
+        margin: 0;
+        color: var(--typography-secondary-color);
+      }
+    }
+
+    .RegisterAccountView__titleWrapper {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      gap: var(--standard-padding-m);
+
+      .RegisterAccountView__bodyText {
+        @extend .body-1;
+        text-align: left;
+        margin: 0;
+        color: var(--typography-secondary-color);
+      }
+    }
+  }
+}

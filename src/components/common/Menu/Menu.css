@@ -1,0 +1,13 @@
+@import '../../../styles/effects/shadows.css';
+
+/* Again, we shouldn't have to avoid the nesting here, but extending and nesting don't seem to work well together */
+.Menu .MuiPaper-root {
+  @extend %shadow-m-1;
+  box-shadow: none;
+  border-radius: var(--border-radius-s);
+  border: 0.0625rem solid var(--line-color);
+}
+
+.Menu .MuiList-root {
+  padding: var(--standard-padding-xs) 0;
+}

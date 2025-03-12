@@ -1,0 +1,116 @@
+@import '../buttons/common/button.css';
+
+.Chip {
+  &.MuiChip-root {
+    --chip-selected-gradient-background-color: var(--base-color-neutral-200);
+    --chip-gradient-raw-color: var(--base-color-neutral-900-rgb-raw);
+    
+    height: 2.375rem;
+    color: var(--base-color-neutral-900);
+    font-size: var(--typescale-root-default);
+    background: var(--button-input-white);
+    border: 1px solid var(--base-color-neutral-400);
+    border-radius: var(--border-radius-full);
+    padding: 0 var(--standard-padding-m);
+    gap: 0.375rem;
+
+    &.MuiChip-deletable {
+      padding-right: 0.75rem;
+    }
+
+    &.Mui-disabled {
+      color: var(--base-color-neutral-600);
+      opacity: 1;
+    }
+
+    &:hover {
+      background: linear-gradient(
+          0deg,
+          rgb(var(--chip-gradient-raw-color), 0.08) 0%,
+          rgb(var(--chip-gradient-raw-color), 0.08) 100%
+        ),
+        var(--button-input-white);
+    }
+
+    &:active {
+      background: linear-gradient(
+          0deg,
+          rgb(var(--chip-gradient-raw-color), 0.12) 0%,
+          rgb(var(--chip-gradient-raw-color), 0.12) 100%
+        ),
+        var(--button-input-white);
+      color: var(--base-color-neutral-700);
+      box-shadow: none;
+    }
+
+    &.Chip__withIcon {
+      padding-left: 0.75rem;
+    }
+
+    &.Chip__selected {
+      background: var(--base-color-neutral-200);
+
+      &:hover {
+        background: linear-gradient(
+          0deg,
+          rgb(var(--chip-gradient-raw-color), 0.06) 0%,
+          rgb(var(--chip-gradient-raw-color), 0.06) 100%
+        ), 
+        var(--chip-selected-gradient-background-color);
+      }
+
+      &:active {
+        background: linear-gradient(
+          0deg,
+          rgb(var(--chip-gradient-raw-color), 0.1) 0%,
+          rgb(var(--chip-gradient-raw-color), 0.1) 100%
+        ),
+        var(--chip-selected-gradient-background-color);
+        color: var(--base-color-neutral-700);
+      }
+    }
+
+    &.MuiChip-sizeSmall {
+      height: 2rem;
+      font-size: var(--typescale-size-default-s);
+      padding: 0 0.75rem;
+
+      &.Chip__withIcon {
+        padding-left: var(--standard-padding-s);
+      }
+
+      &.MuiChip-deletable {
+        padding-right: var(--standard-padding-s);
+      }
+    }
+
+    & .MuiChip-label {
+      padding: 0;
+    }
+
+    & .MuiTouchRipple-root {
+      display: none;
+    }
+
+    & .MuiChip-icon {
+      margin: 0 0.125rem 0 0;
+    }
+
+    & .MuiChip-deleteIcon {
+      margin: 0;
+      color: currentColor;
+    }
+
+    & .MuiChip-iconMedium,
+    & .MuiChip-deleteIconMedium {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+
+    & .MuiChip-iconSmall,
+    & .MuiChip-deleteIconSmall {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+}

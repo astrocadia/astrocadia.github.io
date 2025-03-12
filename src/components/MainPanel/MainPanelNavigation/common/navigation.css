@@ -1,0 +1,54 @@
+:root {
+  --nav-item-height: 2.375rem;
+  --nav-item-icon-size: 1.25rem;
+  --nav-item-horizontal-margin: 1rem;
+  --nav-item-collapsed-horizontal-margin: 0.6875rem;
+  --nav-item-padding: 0.5625rem;
+  --nav-item-focus-outline-color: var(--base-color-neutral-500);
+  --nav-item-active-opacity: 0.12;
+  --nav-item-hover-opacity: 0.08;
+  --nav-item-selected-active-opacity: 0.1;
+  --nav-item-selected-hover-opacity: 0.06;
+  --nav-item-background-color: none;
+  --nav-item-border-color: none;
+  --nav-item-content-color: var(--base-color-neutral-900);
+  --nav-item-active-content-color: var(--base-color-neutral-800);
+  --nav-item-drawer-tab: var(--base-color-neutral-400);
+  --nav-item-hover-background: rgb(
+    var(--base-color-neutral-900-rgb-raw),
+    var(--nav-item-hover-opacity)
+  );
+  --nav-item-active-background: rgb(
+    var(--base-color-neutral-900-rgb-raw),
+    var(--nav-item-active-opacity)
+  );
+
+  --nav-item-selected-content-color: var(--typography-primary-color);
+  --nav-item-selected-active-content-color: var(--base-color-neutral-900);
+  --nav-item-selected-background-color: var(--base-color-neutral-300);
+  --nav-item-selected-hover-background: linear-gradient(
+      0deg,
+      rgba(
+        var(--base-color-neutral-900-rgb-raw),
+        var(--nav-item-selected-hover-opacity)
+      ),
+      rgba(
+        var(--base-color-neutral-900-rgb-raw),
+        var(--nav-item-selected-hover-opacity)
+      )
+    ),
+    var(--base-color-neutral-300);
+  --nav-item-selected-active-background: linear-gradient(
+      0deg,
+      rgba(
+        var(--base-color-neutral-900-rgb-raw),
+        var(--nav-item-selected-active-opacity)
+      ),
+      rgba(
+        var(--base-color-neutral-900-rgb-raw),
+        var(--nav-item-selected-active-opacity)
+      )
+    ),
+    var(--base-color-neutral-300);
+  --nav-item-transition-time: var(--transitions-duration-medium2);
+}

@@ -1,0 +1,46 @@
+@import '../../styles/typography.css';
+
+.ComponentDetailsHeader {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: var(--content-padding-vertical) var(--content-padding-horizontal);
+  border-radius: var(--border-radius-l);
+  background-color: var(--base-color-neutral-200);
+
+  .ComponentDetailsHeader__contentWrapper {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 21.25rem;
+    row-gap: var(--standard-padding-s);
+
+    .ComponentDetailsHeader__titleWrapper {
+      padding-top: var(--standard-padding-xs);
+      @extend .subheading;
+      text-align: center;
+      word-break: break-word;
+    }
+
+    .IconAccordion {
+      &.MuiAccordion-root {
+        width: 100%;
+        &.MuiPaper-root {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+    .ComponentDetailsHeader__contentWrapper {
+      max-width: none;
+    }
+  }
+}

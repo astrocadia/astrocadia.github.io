@@ -1,0 +1,12 @@
+.StandardTabs {
+  &.MuiTabs-root {
+    min-height: 2.375rem;
+    .MuiTabs-flexContainer {
+      gap: 0.5rem;
+    }
+
+    .MuiTabs-indicator {
+      display: none;
+    }
+  }
+}

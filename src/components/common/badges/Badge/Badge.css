@@ -1,0 +1,72 @@
+@import '../../../../styles/typography.css';
+
+.Badge {
+  @extend .caption;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--standard-padding-xs);
+  background: var(--base-color-neutral-200);
+  color: var(--base-color-neutral-900);
+  max-width: 100%;
+
+  /* Default Size is medium */
+  height: 1.5rem;
+  min-width: 1.5rem;
+
+  /* Default styles when Icon and label are both present */
+  padding-left: 0.38rem;
+  padding-right: var(--standard-padding-s);
+
+  &.Badge__iconOnly {
+    width: 1.5rem;
+    padding: 0;
+  }
+
+  &.Badge__noIcon {
+    width: fit-content;
+    padding: 0 var(--standard-padding-s);
+  }
+
+  &.Badge__circle {
+    border-radius: var(--border-radius-full);
+  }
+
+  &.Badge__rounded {
+    border-radius: var(--border-radius-s);
+  }
+
+  & > .MuiSvgIcon-root {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  & > .Badge__label {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &.Badge__large {
+    height: 2rem;
+    min-width: 2rem;
+
+    /* Default styles when Icon and label are both present */
+    padding-left: 0.38rem;
+    padding-right: 0.75rem;
+
+    &.Badge__iconOnly {
+      width: 2rem;
+      padding: 0;
+    }
+
+    &.Badge__noIcon {
+      padding: 0 0.75rem;
+    }
+
+    & > .MuiSvgIcon-root {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+}

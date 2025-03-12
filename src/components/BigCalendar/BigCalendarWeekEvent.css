@@ -1,0 +1,67 @@
+@import '../../styles/typography.css';
+
+.BigCalendarWeekEvent {
+  --bcwe-time-color: var(--base-color-blue-800);
+  --bcwe-title-color: var(--base-color-blue-600);
+  --bcwe-background-color: var(--base-color-blue-100);
+  --bcwe-border-color: --bcwe-background-color;
+  --bcwe-selected-border-color: var(--base-color-blue-400);
+  --bcwe-completed-background-image: url('assets/slash-pattern-blue.svg');
+
+  @extend .caption;
+  display: flex;
+  align-items: center;
+  border: 0.0625rem solid var(--bcwe-border-color);
+  border-radius: var(--border-radius-xs);
+  background-color: var(--bcwe-background-color);
+  background-image: none;
+  background-position: center;
+  padding: repeat(3, var(--standard-padding-xs)) var(--standard-padding-s);
+  min-height: 1.6875rem;
+  margin: -0.0625rem .5rem 0 .5rem;
+  .BigCalendarWeekEvent__labelWrapper {
+    display: flex;
+    gap: var(--standard-padding-s);
+    flex-grow: 1;
+    padding-left: var(--standard-padding-s);
+    padding-right: var(--standard-padding-xs);
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    .BigCalendarWeekEvent__time {
+      color: var(--bcwe-time-color);
+      flex-shrink: 1;
+    }
+
+    .BigCalendarWeekEvent__title {
+      color: var(--bcwe-title-color);
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .BigCalendarWeekEvent__restartIcon {
+    width: 1.5rem;
+    height: 1rem;
+    /* This will always be green since only recurring events have this icon, hence no theming. */
+    color: var(--base-color-green-600);
+    padding-right: var(--standard-padding-xs);
+  }
+
+  .rbc-selected & {
+    --bcwe-border-color: var(--bcwe-selected-border-color);
+  }
+
+  &.BigCalendarWeekEvent__completed {
+    background-image: var(--bcwe-completed-background-image);
+  }
+
+  &.BigCalendarWeekEvent__recurring {
+    --bcwe-time-color: var(--base-color-green-800);
+    --bcwe-title-color: var(--base-color-green-600);
+    --bcwe-background-color: var(--base-color-green-100);
+    --bcwe-selected-border-color: var(--base-color-green-400);
+    --bcwe-completed-background-image: url('assets/slash-pattern-green.svg');
+  }
+}

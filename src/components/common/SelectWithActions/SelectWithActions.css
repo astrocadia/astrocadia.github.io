@@ -1,0 +1,132 @@
+/*  
+ * The SelectWithActions component wrapper.
+ * Button styles are in the SelectWithActionsButton component styles for clarity
+ * in the component itself.
+ * @see ../SelectWithActionsButton/SelectWithActionsButton.css
+ */
+.SelectWithActions {
+  .Mui-disabled:hover {
+    & svg.SelectWithActions__chevron {
+      color: var(--base-color-neutral-500);
+    }
+  }
+  
+  .Select {
+    justify-content: center;
+    
+    &:focus-within {
+      border-color: var(--button-input-border-color);
+    }
+    
+    &:active {
+      border-color: var(--button-input-active-border-color);
+    }
+  }
+  
+  .SelectWithActions__chevron {
+    color: var(--base-color-neutral-700);
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: transform var(--transitions-duration-medium1);
+    margin-top: .125rem;
+  }
+}
+
+/* 
+ * The Dropdown (Paper) Menu.
+ * This lives outside of the SelectWithActions component wrapper.
+ */
+.SelectWithActions__menuPaper {
+  .SelectWithActions__optionsContainer {
+    /* 
+     * Hack to keep the menu items from being too tall. We want the 
+     * reset button to be visible at all times, so we need to limit
+     * the height of the menu items.
+     */
+    max-height: calc(50vh - 2.625rem - (4 * var(--standard-padding-s)));
+    overflow-y: auto;
+  }
+  
+  & li.SelectWithActions__option {
+    --select-with-actions--hover-color: rgba(var(--base-color-neutral-900-rgb-raw), 0.08);
+    --select-with-actions--active-color: rgba(var(--base-color-neutral-900-rgb-raw), 0.12);
+    
+    display: flex;
+    gap: 0;
+    justify-content: space-between;
+    padding-right: 0;
+    border-radius: var(--border-radius-s);
+    padding: 0 0 0 0.62rem;
+    min-width: 15rem;
+    height: 2.375rem;
+    
+    &:hover {
+      background: var(--select-with-actions--hover-color);
+      
+      .Checkbox__icon {
+        fill: var(--select-with-actions--hover-color);
+      }
+    }
+    
+    &:active {
+      background: var(--select-with-actions--active-color);
+      
+      .Checkbox__icon {
+        fill: var(--select-with-actions--active-color);
+      }
+    }
+    
+    &:focus-visible {
+      outline-offset: -0.125rem;
+      outline: 0.0625rem solid var(--base-color-neutral-500);
+      background-color: inherit;
+    }
+    
+    &.SelectWithActions__optionLarge {
+      height: 3.69rem;
+      padding: var(--standard-padding-s) 0 var(--standard-padding-s) 0.62rem;
+    }
+    
+    &.Mui-selected {
+      background: none;
+      
+      &:hover {
+        background: var(--select-with-actions--hover-color);
+      }
+      
+      &:active {
+        background: var(--select-with-actions--active-color);
+      }
+    }
+  }
+  
+  .SelectWithActions__optionIconContainer {
+    margin-right: var(--standard-padding-s);
+  }
+  
+  .SelectWithActions__optionTextContainer {
+    padding-right: 0.375rem;
+  }
+  
+  .SelectWithActions__optionTextSecondary {
+    font-size: var(--typescale-size-default-s);
+    color: var(--base-color-neutral-700);
+  }
+  
+  .SelectWithActions__optionCheckbox {
+    color: var(--base-color-neutral-900);
+    
+    &>.MuiSvgIcon-root {
+      color: var(--base-color-neutral-700);
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+    
+  .SelectWithActions__actionsContainer {
+    display: flex;
+    padding: var(--standard-padding-s) var(--standard-padding-s) var(--standard-padding-xs);
+    justify-content: flex-end;
+    column-gap: var(--standard-padding-xs);
+  }
+}

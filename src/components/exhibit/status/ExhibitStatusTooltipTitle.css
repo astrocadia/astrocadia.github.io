@@ -1,0 +1,26 @@
+.ExhibitStatusTooltipTitle {
+  .ExhibitStatusTooltipTitle__displayName {
+    word-break: break-word;
+    color: var(--typography-primary-color);
+  }
+
+  .ExhibitStatusTooltipTitle__value {
+    word-break: break-word;
+    padding-left: var(--standard-padding-s);
+    color: var(--base-color-neutral-900);
+  }
+
+  & li {
+    align-items: flex-start;
+    padding: var(--standard-padding-xs) 0;
+
+    &:first-child {
+      padding-top: 0;
+      padding-bottom: var(--standard-padding-xs);
+    }
+
+    &:last-child {
+      padding: 0;
+    }
+  }
+}

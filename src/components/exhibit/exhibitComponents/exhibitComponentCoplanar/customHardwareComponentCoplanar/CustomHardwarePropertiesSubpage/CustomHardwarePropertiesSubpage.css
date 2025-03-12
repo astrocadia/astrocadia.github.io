@@ -1,0 +1,107 @@
+@import '../../../../../../styles/typography.css';
+
+.CustomHardwarePropertiesSubpage {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .CustomHardwarePropertiesSubpage__title {
+    margin-bottom: var(--standard-padding-s);
+  }
+
+  .CustomHardwarePropertiesSubpage__contentWrapper {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: var(--content-padding-horizontal);
+    &:has(.CustomHardwarePropertiesSubpage__breadcrumbs) {
+      gap: var(--standard-padding-s);
+    }
+    .CustomHardwarePropertiesSubpage__header {
+      display: flex;
+      flex-direction: column;
+      gap: var(--standard-padding-xs);
+      .CustomHardwarePropertiesSubpage__header__title {
+        @extend .subheading;
+      }
+      .CustomHardwarePropertiesSubpage__header__subtitle {
+        @extend .caption;
+      }
+    }
+    .CustomHardwarePropertiesSubpage__propertiesWrapper {
+      height: 100%;
+      overflow-y: auto;
+      &:has(.CustomHardwarePropertyArrayWrapper__subpage) {
+        overflow-y: visible;
+      }
+
+      padding-bottom: var(--content-padding-horizontal);
+
+      > * {
+        &:focus-visible {
+          outline: none;
+          border: 1px solid var(--base-color-neutral-500);
+        }
+      }
+
+      .GroupPropertyLinkCard .MainPanelCoplanarSubpageLinkCard {
+        &:last-child {
+          margin-bottom: var(--standard-padding-m);
+        }
+      }
+
+      > *:first-child.GroupPropertyLinkCard .MainPanelCoplanarSubpageLinkCard {
+        margin-top: 0;
+      }
+      > *:last-child.GroupPropertyLinkCard .MainPanelCoplanarSubpageLinkCard {
+        margin-bottom: 0;
+      }
+
+      .CustomHardwarePropertyArrayWrapper {
+        &.MainPanelCoplanarSubpageBlockRow__row {
+          margin-bottom: var(--standard-padding-m);
+          border-radius: var(--border-radius-s);
+          border-bottom: var(--standard-border);
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .CustomHardwarePropertyArrayWrapper
+        + .MainPanelCoplanarSubpageBlockRow__row {
+        border-top-left-radius: var(--border-radius-s);
+        border-top-right-radius: var(--border-radius-s);
+      }
+      .MainPanelCoplanarSubpageBlockRow__row {
+        &:has(+ .CustomHardwarePropertyArrayWrapper) {
+          margin-bottom: var(--standard-padding-m);
+          border-bottom-left-radius: var(--border-radius-s);
+          border-bottom-right-radius: var(--border-radius-s);
+          border-bottom: 0.0625rem solid var(--base-color-neutral-400);
+        }
+        & + .CustomHardwarePropertyArrayWrapper {
+          border-top-left-radius: var(--border-radius-s);
+          border-top-right-radius: var(--border-radius-s);
+        }
+        &:not(.MainPanelCoplanarSubpageBlockRow__condensed) {
+          .FormControl.FormControl__horizontal > :last-child {
+            max-width: none;
+          }
+        }
+      }
+    }
+  }
+
+  /* This is a workaround to allow the scrollbar to not obscure the properties
+  update MainPanel.css &:has(.CustomHardwarePropertiesSubpage) selector if removing */
+  .CustomHardwarePropertiesSubpage__title,
+  .CustomHardwarePropertiesSubpage__contentWrapper > * {
+    padding-right: var(--standard-padding-s);
+  }
+
+  .CustomHardwarePropertiesSubpage__noProperties {
+    padding-right: var(--standard-padding-s);
+  }
+}

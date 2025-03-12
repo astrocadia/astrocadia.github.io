@@ -1,0 +1,77 @@
+@import '../../styles/typography.css';
+
+.OktaLoginView {
+  & form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: var(--content-padding-vertical);
+    .OktaLoginView__title {
+      display: flex;
+      flex-direction: column;
+      gap: var(--standard-padding-s);
+      & h1 {
+        @extend .subheading;
+        text-align: left;
+        margin: 0;
+      }
+
+      & p {
+        @extend .body-1;
+        text-align: left;
+        margin: 0;
+        color: var(--typography-secondary-color);
+      }
+    }
+
+    & .OktaLoginView_inputWrapper,
+    & .OktaLoginView__actionsWrapper {
+      .MuiInputBase-root {
+        padding-right: 0;
+      }
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      gap: var(--standard-padding-m);
+      .oktaInputField {
+        .oktaAdornmentButton {
+          padding-left: var(--standard-padding-s);
+          padding-right: var(--standard-padding-s);
+          .MuiOutlinedInput-notchedOutline {
+            border-radius: 0;
+            border-top: none;
+            border-right: none;
+            border-bottom: none;
+            border-color: var(--base-color-neutral-400);
+            border-width: 1px;
+            color: var(--base-color-neutral-900);
+          }
+        }
+        &:hover .oktaAdornmentButton,
+        &:focus-within .oktaAdornmentButton {
+          .MuiOutlinedInput-notchedOutline {
+            border-color: var(--base-color-neutral-500);
+          }
+        }
+        &:focus-within:not(:hover) .oktaAdornmentButton {
+          .MuiOutlinedInput-notchedOutline {
+            border-color: var(--base-color-neutral-600);
+          }
+        }
+        .Mui-error .oktaAdornmentButton,
+        .Mui-error:hover .oktaAdornmentButton,
+        .Mui-error:focus-within .oktaAdornmentButton {
+          .MuiOutlinedInput-notchedOutline {
+            border-color: var(--error-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+.OktaLoginView .subtitle {
+  @extend .subheading;
+  text-align: center;
+  margin: 0;
+}

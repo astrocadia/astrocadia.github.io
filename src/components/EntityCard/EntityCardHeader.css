@@ -1,0 +1,33 @@
+@import '../../styles/typography.css';
+
+.EntityCardHeader {
+  &.MuiCardHeader-root {
+    padding: 0;
+
+    .MuiCardHeader-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      gap: 0.75rem;
+      width: 100%;
+
+      .EntityCardHeader__title {
+        flex: 1;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      .MuiSvgIcon-root {
+        height: 1.25rem;
+        width: 1.25rem;
+        color: var(--base-color-neutral-400);
+      }
+    }
+  }
+}
+
+.EntityCardHeader.MuiCardHeader-root .EntityCardHeader__title {
+  @extend .body-1;
+}

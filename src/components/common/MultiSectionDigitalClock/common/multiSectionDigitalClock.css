@@ -1,0 +1,16 @@
+%multiSectionDigitalClockShared {
+  gap: var(--standard-padding-s);
+}
+
+%multiSectionDigitalClockListShared {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: var(--standard-padding-s);
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  
+  &:not(:first-of-type) {
+    padding-left: var(--standard-padding-s);
+  }
+}

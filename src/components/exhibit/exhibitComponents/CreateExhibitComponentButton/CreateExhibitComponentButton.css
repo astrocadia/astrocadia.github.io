@@ -1,0 +1,15 @@
+.CreateExhibitComponentButton__dialog {
+  .CreateExhibitComponentButton__entityCardBanner::before {
+    background-image: url('../assets/ExhibitComponentsBackground.svg');
+    opacity: 0.5;
+  }
+  
+  .CreateExhibitComponentButton__select__placeholder {
+    color: var(--base-color-neutral-500);
+  }
+  
+  .CreateExhibitComponentButton__entityCardBannerImage__custom-hardware {
+    width: 6rem;
+    height: 6rem;
+  }
+}

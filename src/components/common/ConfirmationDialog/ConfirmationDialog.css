@@ -1,0 +1,5 @@
+.ConfirmationDialog {
+  .MuiDialog-paperScrollPaper {
+    width: 22.5rem;
+  }
+}

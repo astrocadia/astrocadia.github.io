@@ -1,0 +1,80 @@
+name: Main
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  lint:
+    name: Run Linter
+    uses: gumbandapp/gumband-workflows/.github/workflows/lint.yaml@main
+    secrets: inherit
+
+  depcheck:
+    name: Check Dependencies
+    uses: gumbandapp/gumband-workflows/.github/workflows/depcheck.yaml@main
+    secrets: inherit
+
+  audit:
+    name: Audit
+    uses: gumbandapp/gumband-workflows/.github/workflows/audit.yaml@main
+    secrets: inherit
+
+  unit-test:
+    name: Unit Test
+    uses: gumbandapp/gumband-workflows/.github/workflows/unit-test.yaml@main
+    secrets: inherit
+
+  # integration-test:
+  #   name: Integration Test
+  #   needs:
+  #     - lint
+  #     - depcheck
+  #     - audit
+  #     - unit-test
+  #   uses: gumbandapp/gumband-workflows/.github/workflows/integration-test.yaml@main
+  #   secrets: inherit
+  #
+  release-build:
+    name: Release Build
+    needs:
+      - lint
+      - audit
+      - depcheck
+      - unit-test
+    uses: gumbandapp/gumband-workflows/.github/workflows/release-build.yaml@main
+    secrets: inherit
+
+  build-and-push-docker-release:
+    name: Build and Push Docker Release
+    needs: release-build
+    uses: gumbandapp/gumband-workflows/.github/workflows/build-and-push-docker-release.yaml@main
+    secrets: inherit
+
+  deploy-dev:
+    if: github.event.action != 'closed'
+    name: Deploy to Dev
+    needs: build-and-push-docker-release
+    uses: gumbandapp/gumband-workflows/.github/workflows/deploy-gum.yaml@main
+    secrets: inherit
+    with:
+      environment: dev
+
+  deploy-stag:
+    if: github.event.action != 'closed'
+    name: Deploy to Staging
+    needs: deploy-dev
+    uses: gumbandapp/gumband-workflows/.github/workflows/deploy-gum.yaml@main
+    secrets: inherit
+    with:
+      environment: stag
+  prod-deploy-pr:
+    name: Open PR to Deploy to Prod
+    needs: build-and-push-docker-release
+    uses: gumbandapp/gumband-workflows/.github/workflows/deploy-with-pr.yaml@main
+    secrets: inherit
+    with:
+      environment: prod

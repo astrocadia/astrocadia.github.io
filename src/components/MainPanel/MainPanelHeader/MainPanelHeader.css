@@ -1,0 +1,47 @@
+@import '../../../styles/typography.css';
+@import '../common/mainPanel.css';
+
+.MainPanelHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--content-padding-horizontal);
+  border-bottom: var(--MainPanel-border-width) var(--MainPanel-border-style)
+    var(--MainPanel-border-color);
+  padding: var(--content-padding-vertical) var(--content-padding-horizontal);
+}
+
+.MainPanelHeader .MainPanelHeader__titleWrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: var(--standard-padding-s);
+  padding: var(--standard-padding-xs) 0;
+}
+
+.MainPanelHeader .MainPanelHeader__actions {
+  display: flex;
+  flex-direction: row;
+  gap: var(--standard-padding-xs);
+  flex-wrap: nowrap;
+}
+
+.MainPanelHeader .MainPanelHeader__titleWrapper .MainPanelHeader__title {
+  @extend .heading-2;
+  margin: 0;
+}
+
+.MainPanelHeader .MainPanelHeader__titleWrapper .MainPanelHeader__subtitle {
+  @extend .caption;
+}
+
+@media (width < 800px) {
+  .MainPanelHeader .MainPanelHeader__titleWrapper {
+    padding: 0.438rem 0; /* This is explicitly set by design for the purposes of aligning buttons later on */
+  }
+
+  .MainPanelHeader .MainPanelHeader__titleWrapper .MainPanelHeader__title {
+    @extend .subheading;
+  }
+}

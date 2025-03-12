@@ -1,0 +1,256 @@
+.ToggleSwitch {
+  --active-transition: var(--transitions-duration-medium3) var(--transitions-easing-standard-decelerate);
+  --position-transition: var(--transitions-duration-medium4) var(--transitions-easing-standard-decelerate);
+  --unchecked-thumb-scale-factor: 1;
+
+  --unchecked-thumb-height: 1rem;
+  --checked-thumb-height: 1.375rem;
+  /* This scale factor is calculated from the desired size of the two states
+  (checked-thumb-height / unchecked-thumb-height) */
+  --checked-thumb-scale-factor: 1.375;
+
+  --small-unchecked-thumb-height: 0.75rem;
+  --small-checked-thumb-height: 1rem;
+  /* This scale factor is calculated from the desired size of the two states
+  (small-checked-thumb-height / small-unchecked-thumb-height) */
+  --small-checked-thumb-scale-factor: calc(1/0.75);
+
+  --checked-thumb-position: translateX(1.375rem);
+  --small-checked-thumb-position: translateX(0.875rem);
+
+  /* Unchecked color variables */
+  --unchecked-background-color: var(--button-primary-background-color);
+  --unchecked-hover-background-color: var(--button-primary-hover-background);
+  --unchecked-active-background-color: var(--button-primary-active-background);
+  --unchecked-thumb-color: var(--button-secondary-background-color);
+  --unchecked-thumb-active-color: var(--base-color-neutral-600);
+  --unchecked-thumb-disabled-color: var(--button-primary-disabled-typography-color);
+
+  /* Checked color variables */
+  --checked-background-color: var(--button-secondary-background-color);
+  --checked-hover-background-color: var(--button-secondary-hover-background);
+  --checked-active-background-color: var(--button-secondary-active-background);
+  --checked-disabled-background-color: var(--button-secondary-disabled-background-color);
+  --checked-thumb-color: var(--button-primary-background-color);
+  --checked-thumb-active-color: var(--base-color-neutral-200);
+  --checked-thumb-disabled-color: var(--button-secondary-disabled-typography-color);
+
+  /* Icon color variables */
+  --checked-icon-color: var(--checked-background-color);
+  --checked-icon-active-color: var(--checked-active-background-color);
+  --checked-icon-disabled-color: var(--checked-disabled-background-color);
+
+  &.MuiSwitch-root {
+    padding: 0;
+    height: 2rem;
+    width: 3.375rem;
+    min-width: 3.375rem;
+    border-radius: var(--border-radius-full);
+
+    .MuiSwitch-track {
+      width: 3.375rem;
+      min-width: 3.375rem;
+      border-radius: var(--border-radius-full);
+      border: var(--standard-border);
+      background-color: var(--unchecked-background-color);
+      opacity: 1;
+      transition: background-color var(--position-transition),
+        border var(--position-transition);
+    }
+
+    .MuiButtonBase-root {
+      background: none;
+      padding: var(--standard-padding-s);
+      transition: transform var(--position-transition);
+      transform: scale(var(--unchecked-thumb-scale-factor));
+    }
+    .MuiSwitch-thumb {
+      transition: background-color var(--position-transition);
+      background-color: var(--unchecked-thumb-color);
+      border-radius: var(--border-radius-full);
+      box-shadow: none;
+      height: var(--unchecked-thumb-height);
+      width: var(--unchecked-thumb-height);
+      fill: var(--checked-icon-color);
+      display: flex;
+      align-items: center;
+
+      .MuiSvgIcon-root {
+        margin: 0.0625rem;
+        height: min-content;
+        width: min-content;
+      }
+    }
+
+    &.ToggleSwitch__small {
+      height: 1.5rem;
+      width: 2.375rem;
+      min-width: 2.375rem;
+
+      .MuiSwitch-track {
+        width: 2.375rem;
+        min-width: 2.375rem;
+      }
+
+      .MuiButtonBase-root {
+        transform: scale(var(--unchecked-thumb-scale-factor));
+        padding: 0.375rem;
+      }
+      .MuiSwitch-thumb {
+        height: var(--small-unchecked-thumb-height);
+        width: var(--small-unchecked-thumb-height);
+      }
+    }
+
+    &:hover {
+      .MuiSwitch-track {
+        background: var(--unchecked-hover-background-color);
+      }
+    }
+
+    &:active {
+      .MuiSwitch-track {
+        background: var(--unchecked-active-background-color);
+        transition: background-color var(--active-transition),
+          border var(--active-transition);
+      }
+
+      .MuiButtonBase-root {
+        transition: transform var(--active-transition);
+        transform: scale(var(--checked-thumb-scale-factor));
+      }
+      .MuiSwitch-thumb {
+        transition: background-color var(--active-transition);
+        background-color: var(--unchecked-thumb-active-color);
+      }
+
+      &.ToggleSwitch__small {
+        .MuiButtonBase-root {
+          transform: scale(var(--small-checked-thumb-scale-factor));
+        }
+      }
+    }
+
+    &:has(.Mui-checked) {
+      .MuiSwitch-track{
+        background-color: var(--checked-background-color);
+        border: var(--checked-background-color);
+        opacity: 1;
+      }
+
+      .MuiButtonBase-root {
+        transform: var(--checked-thumb-position)
+          scale(var(--checked-thumb-scale-factor));
+      }
+      .MuiSwitch-thumb {
+        background-color: var(--checked-thumb-color);
+      }
+
+      &.ToggleSwitch__small {
+        .MuiButtonBase-root {
+          transform: var(--small-checked-thumb-position)
+            scale(var(--small-checked-thumb-scale-factor));
+        }
+      }
+
+      &:hover {
+        .MuiSwitch-track {
+          background: var(--checked-hover-background-color);
+        }
+
+        .MuiButtonBase-root {
+          background: none;
+        }
+      }
+      &:active {
+        .MuiSwitch-track {
+          transition: background-color var(--active-transition);
+          background: var(--checked-active-background-color);
+          border: var(--checked-active-background-color);
+        }
+
+        .MuiButtonBase-root {
+          transition: transform var(--active-transition);
+          transform: var(--checked-thumb-position)
+            scale(var(--unchecked-thumb-scale-factor));
+        }
+        .MuiSwitch-thumb {
+          transition: background-color var(--active-transition);
+          background-color: var(--checked-thumb-active-color);
+          .MuiSvgIcon-root {
+            fill: var(--checked-icon-active-color);
+          }
+        }
+
+        &.ToggleSwitch__small {
+          .MuiButtonBase-root {
+            transform: var(--small-checked-thumb-position)
+              scale(var(--unchecked-thumb-scale-factor));
+          }
+        }
+      }
+    }
+
+    &:has(.Mui-disabled) {
+      .MuiSwitch-track {
+        opacity: 1;
+        background-color: var(--unchecked-disabled-background-color);
+        background: var(--unchecked-disabled-background-color);
+      }
+
+      &:active .MuiButtonBase-root {
+        transform: var(--unchecked-thumb-position)
+          scale(var(--unchecked-thumb-scale-factor));
+      }
+      .MuiSwitch-thumb {
+        background-color: var(--unchecked-thumb-disabled-color);
+      }
+
+      &:has(.Mui-checked) {
+        .MuiSwitch-track {
+          background-color: var(--checked-disabled-background-color);
+          background: var(--checked-disabled-background-color);
+        }
+
+        .MuiSwitch-thumb {
+          background-color: var(--checked-thumb-disabled-color);
+          .MuiSvgIcon-root {
+            fill: var(--checked-icon-disabled-color);
+          }
+        }
+
+        &:hover .MuiSwitch-track {
+          background-color: var(--checked-disabled-background-color);
+        }
+
+        &:active {
+          .MuiSwitch-track {
+            background-color: var(--checked-disabled-background-color);
+          }
+
+          .MuiButtonBase-root {
+            transform: var(--checked-thumb-position)
+              scale(var(--checked-thumb-scale-factor));
+          }
+          .MuiSvgIcon-root {
+            fill: var(--checked-icon-disabled-color);
+          }
+
+          &.ToggleSwitch__small {
+            .MuiButtonBase-root {
+              transform: var(--small-checked-thumb-position)
+                scale(var(--small-checked-thumb-scale-factor));
+            }
+          }
+        }
+      }
+    }
+
+    &:has(.Mui-focusVisible) {
+      .MuiSwitch-track {
+        outline: 0.0625rem solid var(--base-color-neutral-600);
+        outline-offset: 0.25rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.MetricsPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--content-padding-vertical);
+  flex: 1 1 auto;
+  align-self: stretch;
+  overflow-y: auto;
+
+  .MetricsPanel__chart {
+    width: 100%;
+    min-height: 20rem;
+    overflow-x: auto;
+    flex-grow: 1;
+  }
+
+  @media (width < 800px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

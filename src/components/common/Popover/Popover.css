@@ -1,0 +1,9 @@
+@import '../../../styles/effects/shadows.css';
+
+.Popover .MuiPaper-root {
+    @extend %shadow-m-1;
+    box-shadow: none;
+    border: var(--standard-border);
+    border-radius: var(--border-radius-s);
+    margin-top: var(--standard-padding-xs);
+}

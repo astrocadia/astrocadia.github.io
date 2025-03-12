@@ -1,0 +1,170 @@
+@import '../../../styles/typography.css';
+
+.MenuItem {
+  /* Default */
+  --MenuItem-background: var(--background-workspace-color);
+  --MenuItem-icon-color: var(--base-color-neutral-900);
+  --MenuItem-primary-color: var(--base-color-neutral-900);
+  --MenuItem-secondary-color: var(--typography-secondary-color);
+
+  /* Disabled */
+  --MenuItem-unselected-disabled-primary-color: var(--base-color-neutral-600);
+  --MenuItem-unselected-disabled-secondary-color: var(--base-color-neutral-600);
+  --MenuItem-unselected-disabled-icon-color: var(--base-color-neutral-600);
+
+  /* Unselected - hover */
+  --MenuItem-unselected-hover-background: rgba(
+    var(--base-color-neutral-900-rgb-raw),
+    0.08
+  );
+
+  /* Unselected - active */
+  --MenuItem-unselected-active-background: rgba(
+    var(--base-color-neutral-900-rgb-raw),
+    0.12
+  );
+  --MenuItem-unselected-active-primary-color: var(--base-color-neutral-700);
+  --MenuItem-unselected-active-secondary-color: var(--base-color-neutral-700);
+  --MenuItem-unselected-active-icon-color: var(--base-color-neutral-700);
+
+  /* Selected - default */
+  --MenuItem-selected-background: var(--base-color-neutral-200);
+  --MenuItem-selected-primary-color: var(--base-color-neutral-1000);
+  --MenuItem-selected-secondary-color: var(--base-color-neutral-700);
+  --MenuItem-selected-icon-color: var(--base-color-neutral-1000);
+
+  /* Selected - hover */
+  --MenuItem-selected-hover-tint: rgba(
+    var(--base-color-neutral-900-rgb-raw),
+    0.06
+  );
+  --MenuItem-selected-hover-background-color: linear-gradient(
+      0deg,
+      var(--MenuItem-selected-hover-tint),
+      var(--MenuItem-selected-hover-tint)
+    ),
+    var(--MenuItem-selected-background);
+
+  /* Selected - active */
+  --MenuItem-selected-active-tint: rgba(
+    var(--base-color-neutral-900-rgb-raw),
+    0.1
+  );
+  --MenuItem-selected-active-background: linear-gradient(
+      var(--MenuItem-selected-active-tint),
+      var(--MenuItem-selected-active-tint)
+    ),
+    linear-gradient(
+      var(--MenuItem-selected-background),
+      var(--MenuItem-selected-background)
+    );
+  --MenuItem-selected-active-primary-color: var(--base-color-neutral-800);
+  --MenuItem-selected-active-icon-color: var(--base-color-neutral-800);
+
+  &.MuiMenuItem-root {
+    display: flex;
+    flex-wrap: nowrap;
+    flex: 1 0 auto;
+    gap: var(--standard-padding-s);
+    align-items: center;
+    width: 100%;
+    padding: var(--standard-padding-s) 0.625rem;
+    background: var(--MenuItem-background);
+
+    &:hover {
+      background: var(--MenuItem-unselected-hover-background);
+    }
+
+    &:active {
+      background: var(--MenuItem-unselected-active-background);
+
+      .MuiListItemIcon-root {
+        color: var(--MenuItem-unselected-active-icon-color);
+      }
+
+      .MuiListItemText-primary {
+        color: var(--MenuItem-unselected-active-primary-color);
+      }
+
+      .MuiListItemText-secondary {
+        color: var(--MenuItem-unselected-active-secondary-color);
+      }
+    }
+
+    &.Mui-selected {
+      background: var(--MenuItem-selected-background);
+
+      .MuiListItemIcon-root {
+        color: var(--MenuItem-selected-icon-color);
+      }
+
+      .MuiListItemText-primary {
+        color: var(--MenuItem-selected-primary-color);
+      }
+
+      .MuiListItemText-secondary {
+        color: var(--MenuItem-selected-secondary-color);
+      }
+
+      &:hover {
+        background: var(--MenuItem-selected-hover-background-color);
+      }
+
+      &:active {
+        background: var(--MenuItem-selected-active-background);
+
+        .MuiListItemIcon-root {
+          color: var(--MenuItem-selected-active-icon-color);
+        }
+
+        .MuiListItemText-primary {
+          color: var(--MenuItem-selected-active-primary-color);
+        }
+      }
+    }
+
+    &.Mui-disabled {
+      background: var(--MenuItem-background);
+      opacity: 1;
+
+      .MuiListItemIcon-root {
+        color: var(--MenuItem-unselected-disabled-icon-color);
+      }
+
+      .MuiListItemText-primary {
+        color: var(--MenuItem-unselected-disabled-primary-color);
+      }
+
+      .MuiListItemText-secondary {
+        color: var(--MenuItem-unselected-disabled-secondary-color);
+      }
+    }
+
+    .MuiListItemIcon-root {
+      color: var(--MenuItem-icon-color);
+      min-width: 1.25rem;
+    }
+
+    .MuiListItemText-primary {
+      @extend .body-1;
+      color: var(--MenuItem-primary-color);
+    }
+
+    .MuiListItemText-secondary {
+      @extend .caption;
+      color: var(--MenuItem-secondary-color);
+    }
+
+    .MuiListItemSecondaryAction-root {
+      color: var(--MenuItem-icon-color);
+      display: block;
+      position: unset;
+      margin: 0;
+      top: 0;
+      transform: unset;
+      line-height: 0;
+      min-width: 1.25rem;
+      text-align: center;
+    }
+  }
+}

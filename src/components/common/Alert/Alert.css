@@ -1,0 +1,24 @@
+@import '../../../styles/typography.css';
+
+.Alert {
+  &.MuiAlert-root {
+    border-radius: 1.5rem; /* We can't use var(--border-radius-full) because of the mobile view */
+  }
+
+  &.MuiAlert-standardError {
+    background-color: var(--base-color-orange-100);
+
+    .MuiAlert-icon {
+      color: var(--base-color-orange-400);
+      padding: .5rem 0;
+    }
+
+    .MuiAlert-message {
+      color: var(--base-color-orange-800);
+    }
+  }
+}
+
+.Alert.MuiAlert-root .MuiAlert-message {
+  @extend .body-1;
+}

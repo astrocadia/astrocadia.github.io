@@ -1,0 +1,41 @@
+@import '../../../styles/typography.css';
+
+.ExhibitSchedulingCoplanar {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  
+  .ExhibitSchedulingCoplanar__contentWrapper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: auto;
+    
+    .ExhibitSchedulingCoplanar__content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--content-padding-vertical);
+      flex-grow: 1;
+      height: 100%;
+      overflow: auto;
+
+      .ExhibitSchedulingCoplanar__blockTitle {
+        @extend .body-1;
+        display: flex;
+        align-items: center;
+        gap: var(--standard-padding-s);
+        margin-bottom: var(--standard-padding-s);
+
+        .ExhibitSchedulingCoplanar__actionIconBadge {
+          background: var(--base-color-blue-100);
+          color: var(--base-color-blue-600);
+        }
+
+        .ExhibitSchedulingCoplanar__scheduleIconBadge {
+          background: var(--base-color-yellow-100);
+          color: var(--base-color-yellow-600);
+        }
+      }
+    }
+  }
+}

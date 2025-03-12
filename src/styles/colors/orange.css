@@ -1,0 +1,33 @@
+:root {
+  /* #824100 */
+  --base-color-orange-800-rgb-raw: 130, 65, 0;
+  --base-color-orange-800: rgb(var(--base-color-orange-800-rgb-raw));
+
+  /* #9e4f00 */
+  --base-color-orange-700-rgb-raw: 158, 79, 0;
+  --base-color-orange-700: rgb(var(--base-color-orange-700-rgb-raw));
+
+  /* #ba5e02 */
+  --base-color-orange-600-rgb-raw: 186, 94, 2;
+  --base-color-orange-600: rgb(var(--base-color-orange-600-rgb-raw));
+
+  /* #d46b02 */
+  --base-color-orange-500-rgb-raw: 212, 107, 2;
+  --base-color-orange-500: rgb(var(--base-color-orange-500-rgb-raw));
+
+  /* #f07a05 */
+  --base-color-orange-400-rgb-raw: 240, 122, 5;
+  --base-color-orange-400: rgb(var(--base-color-orange-400-rgb-raw));
+
+  /* #f5a04c */
+  --base-color-orange-300-rgb-raw: 245, 160, 76;
+  --base-color-orange-300: rgb(var(--base-color-orange-300-rgb-raw));
+
+  /* #fac998 */
+  --base-color-orange-200-rgb-raw: 250, 201, 152;
+  --base-color-orange-200: rgb(var(--base-color-orange-200-rgb-raw));
+
+  /* #fff3e8 */
+  --base-color-orange-100-rgb-raw: 255, 243, 232;
+  --base-color-orange-100: rgb(var(--base-color-orange-100-rgb-raw));
+}

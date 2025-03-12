@@ -1,0 +1,33 @@
+:root {
+  /* #6f30a1 */
+  --base-color-purple-800-rgb-raw: 111, 48, 161;
+  --base-color-purple-800: rgb(var(--base-color-purple-800-rgb-raw));
+
+  /* #752fad */
+  --base-color-purple-700-rgb-raw: 117, 47, 173;
+  --base-color-purple-700: rgb(var(--base-color-purple-700-rgb-raw));
+
+  /* #7e2fbd */
+  --base-color-purple-600-rgb-raw: 126, 47, 189;
+  --base-color-purple-600: rgb(var(--base-color-purple-600-rgb-raw));
+
+  /* #842cc9 */
+  --base-color-purple-500-rgb-raw: 132, 44, 201;
+  --base-color-purple-500: rgb(var(--base-color-purple-500-rgb-raw));
+
+  /* #8c2bd6 */
+  --base-color-purple-400-rgb-raw: 140, 43, 214;
+  --base-color-purple-400: rgb(var(--base-color-purple-400-rgb-raw));
+
+  /* #ad66e2 */
+  --base-color-purple-300-rgb-raw: 173, 102, 226;
+  --base-color-purple-300: rgb(var(--base-color-purple-300-rgb-raw));
+
+  /* #cfa5f0 */
+  --base-color-purple-200-rgb-raw: 207, 165, 240;
+  --base-color-purple-200: rgb(var(--base-color-purple-200-rgb-raw));
+
+  /* #e8d9f9 */
+  --base-color-purple-100-rgb-raw: 232, 217, 249;
+  --base-color-purple-100: rgb(var(--base-color-purple-100-rgb-raw));
+}

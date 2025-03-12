@@ -1,0 +1,25 @@
+@import '../../../../../styles/typography.css';
+
+.ListItemExhibitSettingCard {
+  & + .ListItemExhibitSettingCard {
+    margin-top: var(--standard-padding-m);
+  }
+
+  .MainPanelCoplanarSubpageCardHeader__title {
+    color: var(--base-color-neutral-900);
+  }
+
+  .ListItemExhibitSettingCard__actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: var(--standard-padding-s);
+    align-items: center;
+  }
+
+  .ListItemExhibitSettingCard__settingWrapper {
+    > *:last-child.MainPanelCoplanarSubpageLinkCard {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+.BooleanComponentProperty {
+  &.MuiCard-root,
+  & {
+    display: flex;
+    flex-direction: column;
+    gap: var(--standard-padding-m);
+    min-height: 4.375rem;
+    justify-content: center;
+    min-width: 0;
+    align-items: normal;
+
+    .BooleanComponentProperty__propertyValues {
+      display: flex;
+      flex-direction: column;
+      gap: var(--standard-padding-s);
+      width: 100%;
+      .BooleanComponentProperty__row {
+        display: flex;
+        flex-direction: row;
+        gap: var(--standard-padding-s);
+        align-items: center;
+        justify-content: space-between;
+
+        .MuiFormControl-root {
+          /* disable arrows on number input */
+          input::-webkit-outer-spin-button,
+          input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+          .MuiInputBase-root .MuiInputBase-input {
+            text-align: left;
+          }
+        }
+
+        .BooleanComponentProperty__rowIndex {
+          width: 4rem;
+          justify-content: center;
+          align-items: center;
+          &.MuiFormControl-root {
+            .MuiInputBase-root .MuiInputBase-input::placeholder {
+              text-align: center;
+            }
+          }
+        }
+        .BooleanComponentProperty__rowToggleContainer {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: var(--standard-padding-s);
+
+          .BooleanComponentProperty__dotContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 1.25rem;
+            height: 1.25rem;
+          }
+        }
+      }
+    }
+
+    .BooleanComponentProperty__labelAndActionWrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: var(--standard-padding-m);
+
+      .BooleanComponentProperty__labelWrapper {
+        overflow: hidden;
+        & > span {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+      .BooleanComponentProperty__buttonWrapper {
+        display: flex;
+        gap: var(--standard-padding-s);
+        align-items: center;
+      }
+    }
+  }
+}

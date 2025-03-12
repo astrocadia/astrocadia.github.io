@@ -1,0 +1,19 @@
+@import './common/mainPanel.css';
+
+.MainPanelSkeleton {
+  @extend %MainPanelShared;
+
+  .MainPanelSkeleton__contentWrapper {
+    @extend %MainPanelContentWrapperShared;
+    background-color: var(--background-workspace-color);
+    border-top-left-radius: var(--MainPanel-border-radius);
+    border-top-right-radius: var(--MainPanel-border-radius);
+    display: grid;
+    height: 100%;
+
+    .MainPanelSkeleton__spinner {
+      margin: auto;
+      color: var(--base-color-neutral-600);
+    }
+  }
+}

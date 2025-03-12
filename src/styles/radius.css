@@ -1,0 +1,7 @@
+:root {
+  --border-radius-xs: 0.25rem;
+  --border-radius-s: 0.5rem;
+  --border-radius-l: 1.25rem;
+  /* By using an infinitely large number, we can make the border-radius circular */
+  --border-radius-full: calc(infinity * 1rem);
+}

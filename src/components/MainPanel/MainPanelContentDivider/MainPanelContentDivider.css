@@ -1,0 +1,6 @@
+.MainPanelContentDivider {
+  &.MuiDivider-root {
+    margin-left: calc(-1 * var(--content-padding-horizontal));
+    margin-right: calc(-1 * var(--content-padding-horizontal));
+  }
+}

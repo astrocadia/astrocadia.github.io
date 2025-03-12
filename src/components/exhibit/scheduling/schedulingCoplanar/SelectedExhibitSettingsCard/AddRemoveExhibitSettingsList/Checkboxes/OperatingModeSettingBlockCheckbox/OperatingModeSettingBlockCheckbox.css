@@ -1,0 +1,7 @@
+.OperatingModeSettingBlockCheckbox {
+    &.MuiCard-root {
+        .Badge {
+            margin-right: var(--standard-padding-s);
+        }
+    }
+}

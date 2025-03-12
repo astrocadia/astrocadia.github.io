@@ -1,0 +1,85 @@
+@import '../common/button.css';
+
+.IconButton {
+  &.MuiIconButton-root {
+    border-radius: var(--border-radius-full);
+    font-weight: normal;
+    height: 2.375rem;
+    width: 2.375rem;
+    transition: none;
+
+    &:focus-visible {
+      outline-offset: 0.25rem;
+      outline: 0.0625rem solid var(--button-focus-outline-color);
+    }
+
+    &.primary {
+      background-color: var(--button-primary-background-color);
+      border: 0.0625rem solid var(--button-primary-border-color);
+      color: var(--button-primary-typography-color);
+
+      &:hover {
+        background: var(--button-primary-hover-background);
+      }
+
+      &:active {
+        background: var(--button-primary-active-background);
+        color: var(--button-primary-active-typography-color);
+      }
+
+      &.Mui-disabled {
+        color: var(--button-primary-disabled-typography-color);
+      }
+    }
+
+    &.secondary {
+      background-color: var(--button-secondary-background-color);
+      border: 0.0625rem solid var(--button-secondary-border-color);
+      color: var(--button-secondary-typography-color);
+
+      &:hover {
+        background: var(--button-secondary-hover-background);
+      }
+
+      &:active {
+        background: var(--button-secondary-active-background);
+        color: var(--button-secondary-active-typography-color);
+      }
+
+      &.Mui-disabled {
+        background-color: var(--button-secondary-disabled-background-color);
+        color: var(--button-secondary-disabled-typography-color);
+      }
+    }
+
+    &.ghost {
+      background-color: var(--button-ghost-background-color);
+      border: 0.0625rem solid var(--button-ghost-border-color);
+      color: var(--button-ghost-typography-color);
+
+      &:hover {
+        background: var(--button-ghost-hover-background);
+      }
+
+      &:active {
+        background: var(--button-ghost-active-background);
+        color: var(--button-ghost-active-typography-color);
+      }
+
+      &.Mui-disabled {
+        background-color: var(--button-ghost-disabled-background-color);
+        color: var(--button-ghost-disabled-typography-color);
+      }
+    }
+    
+    &.MuiIconButton-sizeSmall {
+      height: 1.75rem;
+      width: 1.75rem;
+    }
+
+    & > .MuiSvgIcon-root {
+      height: 1.25rem;
+      width: 1.25rem;
+    }
+  }
+}

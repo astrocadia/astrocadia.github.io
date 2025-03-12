@@ -1,0 +1,46 @@
+@import '../../styles/typography.css';
+
+RegisterAccountExpiredView {
+  & h1 {
+    @extend .body-2;
+    text-align: left;
+    font-size: 1.25rem;
+    margin: 0;
+  }
+  .BrandedPanel__wrapper .BrandedPanel__content {
+    display: grid;
+    gap: var(--content-padding-vertical);
+
+    .RegisterAccountExpiredView__titleWrapper {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      gap: var(--standard-padding-m);
+
+      .RegisterAccountExpiredView__bodyText {
+        @extend .body-1;
+        text-align: left;
+        margin: 0;
+        color: var(--typography-secondary-color);
+      }
+    }
+
+    .RegisterAccountExpiredView__actionsWrapper {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+
+      .RegisterAccountExpiredView__button {
+        &.RegisterAccountExpiredView__button__isSending {
+          background: linear-gradient(
+              0deg,
+              rgb(var(--base-color-neutral-900-rgb-raw), 0.01) 0%,
+              rgb(var(--base-color-neutral-900-rgb-raw), 0.01) 100%
+            ),
+            var(--base-color-neutral-200);
+          color: var(--base-color-neutral-900);
+        }
+      }
+    }
+  }
+}

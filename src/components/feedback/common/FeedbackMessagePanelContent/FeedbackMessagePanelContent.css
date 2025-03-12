@@ -1,0 +1,10 @@
+@import '../../../../styles/typography.css';
+
+.FeedbackMessagePanelContent {
+  @extend .caption;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: var(--content-padding-vertical);
+}

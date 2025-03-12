@@ -1,0 +1,33 @@
+@import '../../../styles/typography.css';
+@import '../../../styles/effects/shadows.css';
+
+.RichTooltip {
+  /* Likely nothing will be here, as the whole purpose of this component is to wrap another component
+   * and only render a popper when the user hovers over the wrapped component.
+   */
+}
+
+.RichTooltipPopper .MuiTooltip-tooltip {
+  @extend %caption;
+  @extend .shadow-m-1;
+}
+
+.RichTooltipPopper {
+  .MuiTooltip-tooltip {
+    @extend %caption;
+    background-color: var(--background-workspace-color);
+    border-radius: var(--border-radius-s);
+    padding: var(--standard-padding-m);
+    border: 0.0625rem solid var(--line-color);
+    max-width: 17.5rem;
+    min-width: 8.75rem;
+  }
+
+  &.MuiTooltip-popper[data-popper-placement*='bottom'] .MuiTooltip-tooltip {
+    margin-top: 0.5rem;
+  }
+
+  &.MuiTooltip-popper[data-popper-placement*='top'] .MuiTooltip-tooltip {
+    margin-bottom: 0.5rem;
+  }
+}

@@ -1,0 +1,35 @@
+@import './common/metricsCard.css';
+
+.MetricsCardSkeleton.MuiCard-root {
+  @extend %metricsCardRoot;
+  border-color: var(--skeleton-line-color);
+}
+
+.MetricsCardSkeleton.MetricsCardSkeleton__numerical
+  .MetricsCardSkeleton__value {
+  @extend %metricsCardNumericalValue;
+  width: 3rem;
+}
+
+.MetricsCardSkeleton.MetricsCardSkeleton__textual .MetricsCardSkeleton__value {
+  @extend %metricsCardTextualValue;
+  width: 9rem;
+}
+
+.MetricsCardSkeleton {
+  @extend %metricsCard;
+
+  .MetricsCardSkeleton__headingWrapper {
+    @extend %metricsCardHeadingWrapper;
+
+    .MetricsCardSkeleton__title {
+      @extend %metricsCardTitle;
+      width: 90%;
+    }
+
+    .MetricsCardSkeleton__subtitle {
+      @extend %metricsCardSubtitle;
+      width: 60%;
+    }
+  }
+}

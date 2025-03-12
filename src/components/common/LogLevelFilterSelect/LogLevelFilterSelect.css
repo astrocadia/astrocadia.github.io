@@ -1,0 +1,26 @@
+/* 
+ * Leaving these flat for now because the options live outside
+ * of the base component.
+ * Note: LogLevelFilterSelect__info uses the default styles.
+ */
+.LogLevelFilterSelect__debug {
+  background: var(--base-color-blue-100);
+  color: var(--base-color-blue-600);
+}
+
+.LogLevelFilterSelect__error {
+  background: var(--base-color-red-100);
+  color: var(--base-color-red-600);
+}
+
+.LogLevelFilterSelect__warning {
+  background: var(--base-color-orange-100);
+  color: var(--base-color-orange-600);
+}
+
+.LogLevelFilterSelect__menu {
+  .Badge.Badge__iconOnly {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+}

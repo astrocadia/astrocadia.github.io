@@ -1,0 +1,28 @@
+@import '../../styles/typography.css';
+
+.CreateEntityDialog {
+  .MuiDialog-paper {
+    width: 30rem;
+    max-width: 100%;
+  }
+
+  .DialogContent {
+    display: flex;
+    flex-direction: column;
+    gap: var(--standard-padding-m);
+
+    .EntityCardBanner {
+      border: 0.0625rem solid var(--line-color);
+      border-radius: var(--border-radius-s);
+      height: 10rem;
+    }
+    
+    .DialogActions {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.CreateEntityDialog .DialogTitle h2 {
+  @extend .subheading;
+}

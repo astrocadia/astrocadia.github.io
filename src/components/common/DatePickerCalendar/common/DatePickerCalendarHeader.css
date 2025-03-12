@@ -1,0 +1,17 @@
+.DatePickerCalendarHeader {
+  &.MuiPickersCalendarHeader-root {
+    padding: 0;
+    margin: 0;
+    max-height: 2.375rem;
+    min-height: 2.375rem;
+    margin-bottom: var(--standard-padding-m);
+
+    .MuiPickersArrowSwitcher-spacer {
+      width: 2rem;
+    }
+
+    .MuiPickersCalendarHeader-label {
+      color: var(--base-color-neutral-900);
+    }
+  }
+}

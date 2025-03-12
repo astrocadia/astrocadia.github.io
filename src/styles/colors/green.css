@@ -1,0 +1,33 @@
+:root {
+  /* #006128 */
+  --base-color-green-900-rgb-raw: 0, 97, 40;
+  --base-color-green-800: rgb(var(--base-color-green-900-rgb-raw));
+
+  /* #007d34 */
+  --base-color-green-700-rgb-raw: 0, 125, 52;
+  --base-color-green-700: rgb(var(--base-color-green-700-rgb-raw));
+
+  /* #009c41 */
+  --base-color-green-600-rgb-raw: 0, 156, 65;
+  --base-color-green-600: rgb(var(--base-color-green-600-rgb-raw));
+
+  /* #00b54b */
+  --base-color-green-500-rgb-raw: 0, 181, 75;
+  --base-color-green-500: rgb(var(--base-color-green-500-rgb-raw));
+
+  /* #01d458 */
+  --base-color-green-400-rgb-raw: 1, 212, 88;
+  --base-color-green-400: rgb(var(--base-color-green-400-rgb-raw));
+
+  /* #46e085 */
+  --base-color-green-300-rgb-raw: 70, 224, 133;
+  --base-color-green-300: rgb(var(--base-color-green-300-rgb-raw));
+
+  /* #95edba */
+  --base-color-green-200-rgb-raw: 149, 237, 186;
+  --base-color-green-200: rgb(var(--base-color-green-200-rgb-raw));
+
+  /* #eaf9f0 */
+  --base-color-green-100-rgb-raw: 234, 249, 240;
+  --base-color-green-100: rgb(var(--base-color-green-100-rgb-raw));
+}

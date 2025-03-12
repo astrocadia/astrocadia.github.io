@@ -1,0 +1,21 @@
+.NavigationSheet {
+  .NavigationSheet__navWrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(auto-fill, 3.125rem);
+    align-items: center;
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
+
+    .NavigationSheet__navItem {
+      padding: 0;
+      flex-direction: column;
+      border-radius: var(--border-radius-full);
+      gap: 0.25rem;
+      width: 100% !important;
+      height: 3rem;
+      font-size: 0.75rem;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.LoggingTableSkeletonRow {
+  .LoggingTable__logLevelCell {
+    .Skeleton {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+  
+  .LoggingTable__messageCell {
+    .Skeleton {
+      width: 10rem;
+    }
+  }
+  
+  .LoggingTable__componentCell,
+  .LoggingTable__timestampCell {
+    .Skeleton {
+      width: 5rem;
+    }
+  }
+  
+  @media (min-width: 800px) { 
+    .TableCell__body .Skeleton {
+      transform-origin: 0 50%;
+    }
+    
+    .LoggingTable__messageCell,
+    .LoggingTable__timestampCell,
+    .LoggingTable__componentCell {
+      .Skeleton {
+        width: calc(100% - 1.5rem);
+      }
+    }
+    
+    .LoggingTable__messageCell {
+      .Skeleton {
+        width: 100%;
+      }
+    }
+  }
+}

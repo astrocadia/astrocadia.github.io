@@ -1,0 +1,16 @@
+.ConnectedIcon {
+  &.ConnectedIcon__connected {
+    background-color: var(--base-color-green-100);
+    color: var(--base-color-green-600);
+  }
+
+  &.ConnectedIcon__disconnected {
+    background-color: var(--base-color-orange-100);
+    color: var(--base-color-orange-600);
+  }
+  
+  &.ConnectedIcon__neverConnected {
+    background-color: var(--base-color-neutral-200);
+    color: var(--base-color-neutral-700);
+  }
+}

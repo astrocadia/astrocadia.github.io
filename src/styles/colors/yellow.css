@@ -1,0 +1,33 @@
+:root {
+  /* #635300 */
+  --base-color-yellow-900-rgb-raw: 99, 83, 0;
+  --base-color-yellow-800: rgb(var(--base-color-yellow-900-rgb-raw));
+
+  /* #856f00 */
+  --base-color-yellow-700-rgb-raw: 133, 111, 0;
+  --base-color-yellow-700: rgb(var(--base-color-yellow-700-rgb-raw));
+
+  /* #a88d00 */
+  --base-color-yellow-600-rgb-raw: 168, 141, 0;
+  --base-color-yellow-600: rgb(var(--base-color-yellow-600-rgb-raw));
+
+  /* #c9a900 */
+  --base-color-yellow-500-rgb-raw: 201, 169, 0;
+  --base-color-yellow-500: rgb(var(--base-color-yellow-500-rgb-raw));
+
+  /* #ebc400 */
+  --base-color-yellow-400-rgb-raw: 235, 196, 0;
+  --base-color-yellow-400: rgb(var(--base-color-yellow-400-rgb-raw));
+
+  /* #f0d448 */
+  --base-color-yellow-300-rgb-raw: 240, 212, 72;
+  --base-color-yellow-300: rgb(var(--base-color-yellow-300-rgb-raw));
+
+  /* #f7e794 */
+  --base-color-yellow-200-rgb-raw: 247, 231, 148;
+  --base-color-yellow-200: rgb(var(--base-color-yellow-200-rgb-raw));
+
+  /* #fcf9e3 */
+  --base-color-yellow-100-rgb-raw: 252, 249, 227;
+  --base-color-yellow-100: rgb(var(--base-color-yellow-100-rgb-raw));
+}

@@ -1,0 +1,24 @@
+@import '../../../../../../styles/typography.css';
+
+.ListItemDeleteButton__Dialog {
+  .DialogContent {
+    display: flex;
+    flex-direction: column;
+    gap: var(--standard-padding-m);
+  }
+}
+
+.ListItemDeleteButton__Dialog .DialogContent p {
+  @extend .body-1;
+  margin: 0;
+  color: var(--typography-secondary-color);
+  
+  .ListItemDeleteButton__Dialog-itemName {
+    color: var(--base-color-neutral-900);
+  }
+  
+  &.ListItemDeleteButton__Error {
+    @extend .caption;
+    color: var(--error-color);
+  }
+}

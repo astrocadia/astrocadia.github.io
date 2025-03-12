@@ -1,0 +1,78 @@
+@import '../../styles/typography.css';
+
+.UserToggle {
+  --user-toggle-label-color: var(--base-color-neutral-900);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--standard-padding-m);
+  border-radius: var(--border-radius-s);
+  height: 4.375rem;
+  padding: 0 var(--standard-padding-m);
+
+  .UserToggle__userDetailsContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    overflow: hidden;
+
+    .UserAvatar {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .UserToggle__labelContainer {
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      overflow: hidden;
+      max-width: 100%;
+
+      .UserToggle__loading & {
+        gap: 0.3rem;
+      }
+
+      .UserToggle__labelWrapper {
+        @extend .body-1;
+        color: var(--user-toggle-label-color);
+        display: flex;
+        align-items: baseline;
+        gap: var(--standard-padding-xs);
+      }
+
+      .UserToggle__label,
+      .UserToggle__caption {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .UserToggle__label {
+        max-width: 100%;
+      }
+
+      .UserToggle__caption {
+        @extend .caption;
+        max-width: 100%;
+      }
+    }
+  }
+
+  /* States */
+  &.UserToggle__currentUser {
+    border: var(--standard-border);
+    height: auto;
+    padding-top: var(--standard-padding-m);
+    padding-bottom: var(--standard-padding-m);
+
+    .UserToggle__toggleSwitchSkeleton {
+      width: 3.375rem;
+      height: 2rem;
+    }
+  }
+
+  &.UserToggle__selected {
+    --user-toggle-label-color: var(--base-color-neutral-1000);
+  }
+}

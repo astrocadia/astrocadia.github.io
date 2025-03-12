@@ -1,0 +1,26 @@
+@import '../common/navigation.css';
+
+.HorizontalNavigationMenu {
+  height: 4rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: auto;
+  border-radius: var(--border-radius-full);
+  gap: var(--standard-padding-s);
+  padding-left: 0.81rem;
+  padding-right: 0.81rem;
+  background-color: var(--background-workspace-color);
+  overflow: hidden;
+  align-items: center;
+  margin: 0.75rem 0;
+
+  &:has(:first-child.HorizontalNavigationMenuButton__selected) {
+    padding-left: 0.5rem;
+  }
+
+  &:has(:last-child.HorizontalNavigationMenuButton__selected) {
+    padding-right: 0.5rem;
+  }
+}

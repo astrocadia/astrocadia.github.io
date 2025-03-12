@@ -1,0 +1,41 @@
+.TabDropdown {
+  --tab-dropdown-expand-more-icon-color: var(--base-color-neutral-700);
+  --tab-dropdown-hover-expand-more-icon-color: var(--base-color-neutral-900);
+  --tab-dropdown-active-expand-more-icon-color: var(--base-color-neutral-800);
+  --tab-dropdown-disabled-expand-more-icon-color: var(--base-color-neutral-600);
+
+  &.Tab {
+    display: inline-flex;
+    width: 100%;
+    gap: 0.375rem;
+
+    .TabDropdown__Content {
+      align-items: center;
+      display: inline-flex;
+      gap: 0.375rem;
+    }
+
+    .TabDropdown__ExpandMoreIcon {
+      margin-left: auto;
+      color: var(--tab-dropdown-expand-more-icon-color);
+    }
+
+    &:hover {
+      .TabDropdown__ExpandMoreIcon {
+        color: var(--tab-dropdown-hover-expand-more-icon-color);
+      }
+    }
+
+    &:active {
+      .TabDropdown__ExpandMoreIcon {
+        color: var(--tab-dropdown-active-expand-more-icon-color);
+      }
+    }
+
+    &.TabDropdown__disabled {
+      .TabDropdown__ExpandMoreIcon {
+        color: var(--tab-dropdown-disabled-expand-more-icon-color);
+      }
+    }
+  }
+}

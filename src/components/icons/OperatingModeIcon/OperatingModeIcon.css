@@ -1,0 +1,13 @@
+.OperatingModeIcon {
+  &.Badge {
+    &.OperatingModeIcon__On {
+      color: var(--base-color-green-600);
+      background-color: var(--base-color-green-100);
+    }
+
+    &.OperatingModeIcon__Off {
+      color: var(--base-color-orange-600);
+      background-color: var(--base-color-orange-100);
+    }
+  }
+}

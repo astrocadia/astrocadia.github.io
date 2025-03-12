@@ -1,0 +1,43 @@
+@import '../../../styles/typography.css';
+
+.BreadcrumbItem {
+  @extend .body-1;
+  cursor: default;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &.BreadcrumbItem__clickable {
+    color: var(--typography-secondary-color);
+    &:hover {
+      color: var(--base-color-neutral-900);
+    }
+    cursor: pointer;
+
+    &:focus-visible {
+      outline-offset: -0.075rem;
+      outline: 0.0625rem solid var(--base-color-neutral-500);
+      color: var(--base-color-neutral-900);
+      border-radius: var(--border-radius-xs);
+    }
+    &:active {
+      color: var(--base-color-neutral-800);
+    }
+  }
+  &:focus-visible {
+    outline: none;
+  }
+  &.BreadcrumbItem__disabled {
+    color: var(--typography-disabled-color);
+    cursor: default;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: var(--typography-disabled-color);
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
