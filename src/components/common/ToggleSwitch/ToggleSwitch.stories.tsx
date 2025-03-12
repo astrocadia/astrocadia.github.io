@@ -4,15 +4,16 @@ import { ToggleSwitch } from './ToggleSwitch';
 import { CheckIcon } from '../icons';
 
 const meta: Meta<typeof ToggleSwitch> = {
-  title: 'Design System/Components/ToggleSwitch',
+  title: 'Michael Pflueger Portfolio/ToggleSwitch',
   tags: ['autodocs'],
-  component: ToggleSwitch,
   parameters: {
-    design: {
-      type: 'figma',
-      url: 'https://www.figma.com/design/QZrB9MDqVFSzsxpNG6zJ5V/Switches?node-id=1-82&t=xF6OFbqNo8s3S2qZ-1',
+    docs: {
+      description: {
+        component: 'A custom designed Toggle Switch.',
+      },
     },
   },
+  component: ToggleSwitch,
   decorators: [
     (Story) => (
       <ThemeProviderWrapper>

@@ -4,9 +4,15 @@ import { ThemeProviderWrapper } from '../../../../../../../../styles/helpers/The
 import { TriggerComponentProperty } from './TriggerComponentProperty';
 
 const meta: Meta<typeof TriggerComponentProperty> = {
-  title:
-    'Design System/Composite Components/Hardware Properties/TriggerComponentProperty',
+  title: 'Michael Pflueger Portfolio/Inputs/TriggerComponentProperty',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'A button for updating a Hardware Trigger property.',
+      },
+    },
+  },
   component: TriggerComponentProperty,
   args: {
     propertyName: 'Trigger Property',

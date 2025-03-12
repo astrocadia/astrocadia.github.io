@@ -18,9 +18,16 @@ import { type NavItem } from '../common/navigation';
 import { HorizontalNavigationMenu } from './HorizontalNavigationMenu';
 
 const meta: Meta<typeof HorizontalNavigationMenu> = {
-  title:
-    'Design System/Composite Components/Main Panel Navigation/Horizontal Navigation Menu',
+  title: 'Michael Pflueger Portfolio/Navigation/Horizontal Navigation Menu',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'A navigation menu for Mobile view with pop-up for extended options.',
+      },
+    },
+  },
   component: HorizontalNavigationMenu,
 };
 

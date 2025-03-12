@@ -29,9 +29,16 @@ const property: ColorProperty = {
 };
 
 const meta: Meta<typeof ColorComponentProperty> = {
-  title:
-    'Design System/Composite Components/Hardware Properties/ColorComponentProperty',
+  title: 'Michael Pflueger Portfolio/Inputs/ColorComponentProperty',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'An input for updating a Hardware Color property with accomodation for arrays of values and csv upload/download.',
+      },
+    },
+  },
   component: ColorComponentProperty,
   args: {
     property: {

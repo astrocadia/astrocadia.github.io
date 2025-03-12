@@ -6,8 +6,16 @@ import { ExhibitComponentCard } from './ExhibitComponentCard';
 import { ExhibitComponentCardSkeleton } from './ExhibitComponentCardSkeleton';
 
 const meta: Meta<typeof ExhibitComponentCard> = {
-  title: 'Design System/Composite Components/ExhibitComponentCard',
+  title: 'Michael Pflueger Portfolio/Card/ExhibitComponentCard',
   tags: ['autodocs'],
+  tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'A card for selecting exhibit components.',
+      },
+    },
+  },
   component: ExhibitComponentCard,
 };
 

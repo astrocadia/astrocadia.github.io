@@ -29,9 +29,16 @@ const property: NumberProperty = {
 };
 
 const meta: Meta<typeof NumberComponentProperty> = {
-  title:
-    'Design System/Composite Components/Hardware Properties/NumberComponentProperty',
+  title: 'Michael Pflueger Portfolio/Inputs/NumberComponentProperty',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'An input for updating a Hardware Number property with accomodation for arrays of values and csv upload/download.',
+      },
+    },
+  },
   component: NumberComponentProperty,
   args: {
     property: {

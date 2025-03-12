@@ -23,9 +23,15 @@ const property: StringProperty = {
 };
 
 const meta: Meta<typeof StringComponentProperty> = {
-  title:
-    'Design System/Composite Components/Hardware Properties/StringComponentProperty',
+  title: 'Michael Pflueger Portfolio/Inputs/StringComponentProperty',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'An input for updating a Hardware String property.',
+      },
+    },
+  },
   component: StringComponentProperty,
   args: {
     property: {

@@ -18,9 +18,15 @@ import {
 } from './StandardNavigationMenu';
 
 const meta: Meta<typeof StandardNavigationMenu> = {
-  title:
-    'Design System/Composite Components/Main Panel Navigation/Standard Navigation Menu',
+  title: 'Michael Pflueger Portfolio/Navigation/Standard Navigation Menu',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'A colapsible navigation menu for Desktop view.',
+      },
+    },
+  },
   component: StandardNavigationMenu,
 };
 

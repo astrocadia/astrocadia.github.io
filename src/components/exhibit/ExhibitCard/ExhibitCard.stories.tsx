@@ -4,7 +4,7 @@ import { RouteWrapper } from '../../../views/routes/helpers/stories/RouteWrapper
 import { ExhibitCard } from './ExhibitCard';
 
 const meta: Meta<typeof ExhibitCard> = {
-  title: 'Design System/Composite Components/ExhibitCard',
+  title: 'Michael Pflueger Portfolio/Card/ExhibitCard',
   decorators: [
     (Story) => (
       <ThemeProviderWrapper>
@@ -15,6 +15,13 @@ const meta: Meta<typeof ExhibitCard> = {
     ),
   ],
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'A card for selecting exhibits.',
+      },
+    },
+  },
   component: ExhibitCard,
 };
 

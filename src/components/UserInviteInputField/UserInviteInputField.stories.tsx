@@ -6,8 +6,15 @@ import { ArrowBackIcon } from '../common/icons';
 import { Button } from '../common/buttons/Button';
 
 const meta: Meta<typeof UserInviteInputField> = {
-  title: 'Design System/Composite Components/UserInviteInputField',
+  title: 'Michael Pflueger Portfolio/UserInviteInputField',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'An input field for inviting new users to our app.',
+      },
+    },
+  },
   component: UserInviteInputField,
 };
 export default meta;

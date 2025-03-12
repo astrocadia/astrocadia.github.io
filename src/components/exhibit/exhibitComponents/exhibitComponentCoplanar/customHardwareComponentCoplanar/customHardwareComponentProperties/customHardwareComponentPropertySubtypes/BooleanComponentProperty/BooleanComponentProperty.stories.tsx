@@ -30,9 +30,16 @@ const property: BooleanProperty = {
 };
 
 const meta: Meta<typeof BooleanComponentProperty> = {
-  title:
-    'Design System/Composite Components/Hardware Properties/BooleanComponentProperty',
+  title: 'Michael Pflueger Portfolio/Inputs/BooleanComponentProperty',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component:
+          'An input for updating a Hardware Boolean property with accomodation for arrays of values and csv upload/download.',
+      },
+    },
+  },
   component: BooleanComponentProperty,
   args: {
     property: {

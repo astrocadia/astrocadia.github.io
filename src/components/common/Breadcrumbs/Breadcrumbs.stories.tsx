@@ -5,8 +5,15 @@ import { BreadcrumbItem } from '../BreadcrumbItem';
 import { RouteWrapper } from '../../../views/routes/helpers/stories/RouteWrapper';
 
 const meta: Meta<typeof Breadcrumbs> = {
-  title: 'Design System/Components/Breadcrumbs',
+  title: 'Michael Pflueger Portfolio/Breadcrumbs',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Breadcrumbs for displaying a custom setting hierchy',
+      },
+    },
+  },
   component: Breadcrumbs,
 };
 

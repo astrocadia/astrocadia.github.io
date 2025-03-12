@@ -4,7 +4,7 @@ import { MainPanelSkeleton } from './MainPanelSkeleton';
 
 const meta: Meta<typeof MainPanelSkeleton> = {
   title: 'Design System/Views/Main Panel/Main Panel Skeleton',
-  tags: ['autodocs'],
+  tags: ['autodocs', '!dev'],
   component: MainPanelSkeleton,
 };
 

@@ -8,8 +8,15 @@ import { FolderIcon, SettingListIcon } from '../common/icons';
 import { LinkCard } from './LinkCard';
 
 const meta: Meta<typeof LinkCard> = {
-  title: 'Design System/Composite Components/LinkCard',
+  title: 'Michael Pflueger Portfolio/Card/LinkCard',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Card for navigation of settings and controls.',
+      },
+    },
+  },
   component: LinkCard,
 };
 

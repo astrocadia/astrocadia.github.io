@@ -15,7 +15,7 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        method: 'alphabetical',
+        order: ['Michael Pflueger Portfolio', 'Design System'],
       },
     },
   },
