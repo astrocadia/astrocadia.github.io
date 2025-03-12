@@ -1,0 +1,6 @@
+import{j as r}from"./jsx-runtime-4WDyTGeM.js";import{M as e}from"./MenuToggleButton-Bw_RHFrl.js";import{a as i}from"./WarningIcon-hyuTG_uV.js";import"./EditIcon-DQffeilE.js";import"./LinkIcon-CTu8-jnD.js";import"./SvgIcon-DKK2_66P.js";import{T as m}from"./ThemeProviderWrapper-uQhE3vfQ.js";import"./index-Dl6G-zuu.js";import"./index-eOQoo3sK.js";import"./Button-BoimfWT1.js";import"./Button-BYmqNiby.js";import"./styled-DaAyEikA.js";import"./ButtonBase-gXIT4mbS.js";import"./useTimeout-B4b6mSVs.js";import"./TransitionGroupContext-xAci1nHd.js";import"./useForkRef-BDoLG09A.js";import"./useIsFocusVisible-NzCoqL_q.js";import"./SvgIcon-d6V0mnb4.js";const B={title:"Design System/Components/MenuToggleButton",tags:["autodocs"],component:e},p=({...t})=>r.jsx(m,{children:r.jsxs("div",{style:{display:"flex",gap:"1rem"},children:[r.jsx(e,{...t,children:"Closed"}),r.jsx(e,{open:!0,...t,children:"Open"}),r.jsx(e,{open:!0,...t,children:"Open"}),r.jsx(e,{disabled:!0,...t,children:"Disabled"})]})}),o={args:{startIcon:r.jsx(i,{})},render:p};var n,s,a;o.parameters={...o.parameters,docs:{...(n=o.parameters)==null?void 0:n.docs,source:{originalSource:`{
+  args: {
+    startIcon: <CalendarMonthIcon />
+  },
+  render
+}`,...(a=(s=o.parameters)==null?void 0:s.docs)==null?void 0:a.source}}};const E=["Default"];export{o as Default,E as __namedExportsOrder,B as default};

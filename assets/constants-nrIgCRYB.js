@@ -1,0 +1,1 @@
+const E=1e3,_="Minimum value is",A="Maximum value is",R="Maximum character length is",s="Enter integer value",a="Enter byte value",t="Enter float value",I=3,M=100,L=50;export{I as A,a as B,t as F,s as I,_ as M,E as S,A as a,M as b,R as c,L as d};
