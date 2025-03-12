@@ -1,0 +1,1 @@
+import{r as e}from"./index-Dl6G-zuu.js";const c=()=>{const[a,o]=e.useState(null),t=!!a,r=e.useCallback(n=>{o(n.currentTarget)},[]),l=e.useCallback(n=>{n.stopPropagation(),o(n.currentTarget)},[]),s=e.useCallback(()=>{o(null)},[]);return{anchorEl:a,open:t,handleOpenMenu:r,handleOpenMenuAndStopPropagation:l,handleCloseMenu:s}};export{c as u};

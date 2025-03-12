@@ -1,0 +1,1 @@
+import{i as m}from"./lang-BqISUGWn.js";import{s as o}from"./sort-BNrymFaU.js";const i=e=>[e.firstName,e.lastName].filter(r=>!m(r)).join(" "),u=e=>e.sort((r,s)=>{const t=i(r)||r.email,a=i(s)||s.email;return t===a?o(r.email,s.email):o(t,a)});export{i as g,u as s};

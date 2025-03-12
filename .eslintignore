@@ -1,0 +1,6 @@
+/.storybook
+/.vscode
+/coverage
+/dist
+/node_modules
+/storybook-static

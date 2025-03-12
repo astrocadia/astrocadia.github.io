@@ -1,0 +1,1 @@
+import{j as e}from"./jsx-runtime-4WDyTGeM.js";/* empty css             */const p=({children:r})=>e.jsx(e.Fragment,{children:r});try{p.displayName="StyleWrapper",p.__docgenInfo={description:"",displayName:"StyleWrapper",props:{}}}catch{}export{p as S};

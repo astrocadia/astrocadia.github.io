@@ -1,0 +1,1 @@
+import{r as n}from"./index-Dl6G-zuu.js";const u=(e,o,s)=>{n.useEffect(()=>{const t=new IntersectionObserver(r=>{r.forEach(s)},o),c=Array.isArray(e)?e.map(r=>r.current):[e.current];return c.forEach(r=>{r&&t.observe(r)}),()=>{c.forEach(r=>{r&&t.unobserve(r)})}},[e,o,s])};export{u};
