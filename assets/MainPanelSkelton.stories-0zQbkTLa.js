@@ -1,5 +1,0 @@
-import{j as e}from"./jsx-runtime-4WDyTGeM.js";import{T as t}from"./ThemeProviderWrapper-Be5RUURM.js";import{C as i}from"./CircularProgress-BgQ2h3g8.js";import"./index-Dl6G-zuu.js";import"./index-eOQoo3sK.js";import"./styled-Dt2_JBRt.js";const l=()=>e.jsx("div",{className:"AppBreadcrumbSkeleton"}),o=()=>e.jsxs("div",{className:"MainPanelSkeleton",children:[e.jsx(l,{}),e.jsx("div",{className:"MainPanelSkeleton__contentWrapper",children:e.jsx(i,{size:"2rem",thickness:3,className:"MainPanelSkeleton__spinner"})})]}),P={title:"Design System/Views/Main Panel/Main Panel Skeleton",tags:["autodocs"],component:o},r={render:()=>e.jsx(t,{children:e.jsx(o,{})})};var a,s,n;r.parameters={...r.parameters,docs:{...(a=r.parameters)==null?void 0:a.docs,source:{originalSource:`{
-  render: () => <ThemeProviderWrapper>
-      <MainPanelSkeleton />
-    </ThemeProviderWrapper>
-}`,...(n=(s=r.parameters)==null?void 0:s.docs)==null?void 0:n.source}}};const S=["Default"];export{r as Default,S as __namedExportsOrder,P as default};
