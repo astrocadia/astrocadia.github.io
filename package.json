@@ -3,7 +3,9 @@
   "private": true,
   "version": "2.0.221",
   "type": "module",
+  "homepage": "https://your-username.github.io",
   "scripts": {
+    "deploy": "gh-pages -d storybook-static",
     "start": "npm run dev",
     "dev": "vite",
     "build": "tsc && vite build",
