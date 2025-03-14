@@ -3,8 +3,15 @@ import { ThemeProviderWrapper } from '../../../../../styles/helpers/ThemeProvide
 import { CustomChartComponent } from './CustomChartComponent';
 
 const meta: Meta<typeof CustomChartComponent> = {
-  title: 'Design System/Composite Components/Metrics/CustomChartComponent',
+  title: 'Michael Pflueger Portfolio/CustomChartComponent',
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'Custom charts for displaying exhibit interation data.',
+      },
+    },
+  },
   component: CustomChartComponent,
 };
 
