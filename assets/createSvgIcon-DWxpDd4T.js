@@ -1,1 +1,0 @@
-import{b as i}from"./ThemeProviderWrapper-uQhE3vfQ.js";import{r as o}from"./index-Dl6G-zuu.js";import{j as s}from"./jsx-runtime-4WDyTGeM.js";import{S as t}from"./SvgIcon-d6V0mnb4.js";function x(e,m){function r(n,a){return s.jsx(t,i({"data-testid":`${m}Icon`,ref:a},n,{children:e}))}return r.muiName=t.muiName,o.memo(o.forwardRef(r))}export{x as c};

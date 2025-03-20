@@ -1,1 +1,0 @@
-.CardList{display:grid;gap:var(--standard-padding-m);grid-template-columns:repeat(auto-fill,18.75rem)}@media (max-width: 800px){.CardList{grid-template-columns:1fr}}

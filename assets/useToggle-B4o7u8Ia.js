@@ -1,1 +1,0 @@
-import{r as e}from"./index-Dl6G-zuu.js";const o=(t=!1)=>{const[a,s]=e.useState(t),r=e.useCallback(()=>{s(g=>!g)},[]),l=e.useCallback(()=>{s(!0)},[]),c=e.useCallback(()=>{s(!1)},[]);return{toggled:a,toggle:r,setOn:l,setOff:c}};try{o.displayName="useToggle",o.__docgenInfo={description:"",displayName:"useToggle",props:{}}}catch{}export{o as u};

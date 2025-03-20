@@ -1,1 +1,0 @@
-.MainPanel:has(.MainPanel__menuMobile)+.Toaster .Toast.MuiSnackbar-root.MuiSnackbar-anchorOriginBottomCenter{bottom:calc(var(--MainPanel-mobile-nav-height) + 2rem)}
