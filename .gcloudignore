@@ -1,8 +1,0 @@
-# Ignore everything
-*
-
-# Allow storybook-static folder
-!storybook-static
-
-# Allow files and folders inside storybook-static
-!/storybook-static/**

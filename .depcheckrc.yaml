@@ -1,8 +1,0 @@
-ignores:
-  - '@storybook/*'
-  - '@types/*'
-  - '@vitest/*'
-  - 'autoprefixer'
-  - 'postcss*'
-  - 'prop-types'
-  - 'stylelint*'
