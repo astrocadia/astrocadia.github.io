@@ -1,8 +1,0 @@
-.Table {
-  background: var(--background-workspace-color);
-  border-radius: var(--border-radius-s);
-  border-collapse: separate;
-  font-size: var(--typescale-size-default-s);
-  min-width: 0;
-  table-layout: fixed;
-}

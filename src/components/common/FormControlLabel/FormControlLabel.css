@@ -1,5 +1,0 @@
-@import '../../../styles/typography.css';
-
-.FormControlLabel {
-    @extend .body-1;
-}

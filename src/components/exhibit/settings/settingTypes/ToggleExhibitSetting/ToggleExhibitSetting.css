@@ -1,8 +1,0 @@
-.ToggleExhibitSetting {
-  &.MuiCard-root {
-    &.MainPanelCoplanarSubpageBlockRow__condensed .FormControl.FormControl__horizontal > :last-child {
-      flex: 0 0 0;
-      min-width: 3.375rem;
-    }
-  }
-}

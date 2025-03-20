@@ -1,8 +1,0 @@
-.ExhibitSchedulingCoplanarActions {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: var(--standard-padding-s);
-  flex-grow: 0;
-  padding: var(--standard-padding-l);
-}

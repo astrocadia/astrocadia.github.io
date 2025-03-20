@@ -1,6 +1,0 @@
-@import '../common/mainPanel.css';
-
-.MainPanelContent {
-  padding: var(--content-padding-vertical) var(--content-padding-horizontal);
-  overflow-y: auto;
-}

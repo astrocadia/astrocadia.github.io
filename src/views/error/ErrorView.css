@@ -1,8 +1,0 @@
-.ErrorView {
-  .ErrorView__errorContainer {
-    white-space: pre;
-    text-align: left;
-    overflow: scroll;
-    max-height: 18.75rem;
-  }
-}

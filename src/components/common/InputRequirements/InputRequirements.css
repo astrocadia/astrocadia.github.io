@@ -1,6 +1,0 @@
-.InputRequirements {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  gap: var(--standard-padding-xs);
-}

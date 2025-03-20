@@ -1,7 +1,0 @@
-.AddRemoveExhibitSettingsList__settingWrapper {
-  overflow-y: auto;
-
-  .AddRemoveExhibitSettingsList__settingListItemWrapper {
-    margin-bottom: var(--standard-padding-m);
-  }
-}

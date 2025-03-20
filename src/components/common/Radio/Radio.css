@@ -1,9 +1,0 @@
-.Radio {
-  &.MuiRadio-root {
-    color: var(--base-color-neutral-400);
-
-    &.Mui-checked {
-      color: var(--base-color-neutral-700);
-    }
-  }
-}

@@ -1,8 +1,0 @@
-.ProjectChartComparison{
-    display: flex;
-    flex-direction: column;
-    gap: var(--content-padding-vertical);
-    .ProjectChartComparison__selectChartDropdown {
-        width: 12.5rem;
-    }
-}
