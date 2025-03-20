@@ -5,13 +5,14 @@
   "type": "module",
   "homepage": "https://astrocadia.github.io",
   "scripts": {
-    "deploy": "gh-pages -d .",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "gh-pages": "^6.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
