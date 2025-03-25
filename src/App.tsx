@@ -1,35 +1,31 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import { Routes, Route, Link } from "react-router-dom";
+import { Home } from "./pages/Home";
+import { Professional } from "./pages/Professional";
+import { Projects } from "./pages/Projects";
+import { Artwork } from "./pages/Artwork";
+import { StyledLink } from "./components/StyledLink";
 
-function App() {
-  const [count, setCount] = useState(0);
-
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div className="font-ubuntuMono min-v-screen bg-gray-100 text-gray-900 dark:text-black">
+      <nav className="sticky top-0 z-50 bg-white p-4 shadow-md dark:bg-gray-200">
+        <div className="container mx-1 flex justify-between">
+          <h1 className="text-xl">
+            michael pflueger • software developer & artist
+          </h1>
+          <div className="space-x-4">
+            <StyledLink href="#professional">Professional</StyledLink>
+            <StyledLink href="#projects">Projects</StyledLink>
+            <StyledLink href="#artwork">Artwork</StyledLink>
+          </div>
+        </div>
+      </nav>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/professional" element={<Professional />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/artwork" element={<Artwork />} />
+      </Routes>
+    </div>
   );
 }
-
-export default App;
