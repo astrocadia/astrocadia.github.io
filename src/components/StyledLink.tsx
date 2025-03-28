@@ -12,7 +12,7 @@ export const StyledLink: FunctionComponent<StyledLink> = ({
   return (
     <a
       href={href}
-      className="hover:underline focus-visible:rounded-lg focus-visible:outline focus-visible:outline-offset-4 focus-visible:outline-black"
+      className="hover:text-gray-700 focus-visible:rounded-lg focus-visible:outline focus-visible:outline-offset-4 focus-visible:outline-gray-400 active:text-gray-500"
     >
       {children}
     </a>
