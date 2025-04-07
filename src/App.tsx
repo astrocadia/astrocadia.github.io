@@ -13,12 +13,12 @@ export default function App() {
           <h1 className="text-center text-xl lg:text-left">
             michael pflueger • software developer & artist
           </h1>
-          <div className="ml-auto hidden space-x-4 lg:flex">
+          {/* <div className="ml-auto hidden space-x-4 lg:flex">
             <StyledLink href="/#professional">professional</StyledLink>
             <StyledLink href="/#projects">projects</StyledLink>
             <StyledLink href="/#artwork">artwork</StyledLink>
             <StyledLink href="/#about">about</StyledLink>
-          </div>
+          </div> */}
         </div>
       </nav>
       <Routes>
