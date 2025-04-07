@@ -10,24 +10,25 @@ export const Home: FunctionComponent = () => {
 
   return (
     <div className="container mx-auto p-4 text-center">
-      <h2 id="professional" className="scroll-mt-16 pt-5 text-3xl">
+      {/* <h2 id="professional" className="scroll-mt-16 pt-5 text-3xl">
         professional
       </h2>
+
       <div className="flex w-full flex-wrap justify-center gap-6 p-4">
         <Card
           onClick={() => {
             navigate("professional/okta");
           }}
-          imageUrl={okta}
+          // imageUrl={okta}
           title="Okta SSO"
           description="multi-tennant single sign on with the Okta platform"
         />
         <Card
-          imageUrl={hw}
+          // imageUrl={hw}
           title="Hardware Device Interface"
           description="monitoring and control for custom hardware device"
         />
-        <Card
+        {/* <Card
           imageUrl={hw}
           title="ETL & Charts"
           description="custom charts for displaying data from an ETL process"
@@ -36,7 +37,7 @@ export const Home: FunctionComponent = () => {
           imageUrl={hw}
           title="Navigation menu"
           description="navigation for desktop and mobile views"
-        />
+        /> 
       </div>
       <h2 id="projects" className="scroll-mt-16 pt-5 text-3xl">
         personal projects
@@ -50,7 +51,7 @@ export const Home: FunctionComponent = () => {
       </h2>
       <div className="flex w-full flex-wrap justify-center gap-4 p-4">
         <Card title="paintings, drawings, and murals" />
-      </div>
+      </div> */}
       <h2 id="about" className="scroll-mt-16 pt-5 text-3xl">
         about
       </h2>
