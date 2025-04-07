@@ -1,12 +1,12 @@
 import { FunctionComponent } from "react";
-import { Card } from "../components/Card";
-import { useNavigate } from "react-router-dom";
+// import { Card } from "../components/Card";
+// import { useNavigate } from "react-router-dom";
 import profile from "../assets/michael.jpg";
-import okta from "../assets/okta.gif";
-import hw from "../assets/hw_array.gif";
+// import okta from "../assets/okta.gif";
+// import hw from "../assets/hw_array.gif";
 
 export const Home: FunctionComponent = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   return (
     <div className="container mx-auto p-4 text-center">
